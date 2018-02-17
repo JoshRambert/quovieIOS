@@ -18,5 +18,6 @@ target 'quovieIOS' do
   end
 
     pod 'Firebase/Core'
+    pod 'Firebase/Database'
 
 end
