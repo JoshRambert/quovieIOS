@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF42037AB62007E59FB /* QuovieMainPage.swift */; };
+		8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */; };
+		8321DCF92037ABBC007E59FB /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF82037ABBC007E59FB /* ProfilePage.swift */; };
 		83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5D720379F1600C99E9C /* AppDelegate.swift */; };
-		83EEE5DA20379F1600C99E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5D920379F1600C99E9C /* ViewController.swift */; };
 		83EEE5DD20379F1600C99E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DB20379F1600C99E9C /* Main.storyboard */; };
 		83EEE5DF20379F1600C99E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DE20379F1600C99E9C /* Assets.xcassets */; };
 		83EEE5E220379F1600C99E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5E020379F1600C99E9C /* LaunchScreen.storyboard */; };
 		83EEE5ED20379F1600C99E9C /* quovieIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5EC20379F1600C99E9C /* quovieIOSTests.swift */; };
 		83EEE5F820379F1600C99E9C /* quovieIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5F720379F1600C99E9C /* quovieIOSUITests.swift */; };
 		83EEE6062037A0FC00C99E9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */; };
+		CD3B6F53DCDD0969B939880D /* Pods_quovieIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109D450AC3F0E6DCB385F996 /* Pods_quovieIOSTests.framework */; };
+		DF8E9347C1C7BCCAFC0F53ED /* Pods_quovieIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADC3D9C80C9B02726802B8F /* Pods_quovieIOS.framework */; };
+		E0C4F76AF62A3A5601196FD7 /* Pods_quovieIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4AE76A48780F2EC25FDD3A /* Pods_quovieIOSUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		109D450AC3F0E6DCB385F996 /* Pods_quovieIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quovieIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C4AE76A48780F2EC25FDD3A /* Pods_quovieIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quovieIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B791D899C329406D315D1F4 /* Pods-quovieIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOSUITests/Pods-quovieIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8321DCF42037AB62007E59FB /* QuovieMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuovieMainPage.swift; sourceTree = "<group>"; };
+		8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNewsArticles.swift; sourceTree = "<group>"; };
+		8321DCF82037ABBC007E59FB /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		83EEE5D420379F1600C99E9C /* quovieIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quovieIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EEE5D720379F1600C99E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83EEE5D920379F1600C99E9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83EEE5DC20379F1600C99E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83EEE5DE20379F1600C99E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83EEE5E120379F1600C99E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,12 @@
 		83EEE5F720379F1600C99E9C /* quovieIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quovieIOSUITests.swift; sourceTree = "<group>"; };
 		83EEE5F920379F1600C99E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD02F0827D05428876F92DBC /* Pods-quovieIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOSTests/Pods-quovieIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		BDDA70CAC1BF7DAE772E2BF6 /* Pods-quovieIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOSTests/Pods-quovieIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F573C07F5FAD249A65C4BF /* Pods-quovieIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOSUITests/Pods-quovieIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9895B25781DE5020B1D4105 /* Pods-quovieIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOS/Pods-quovieIOS.release.xcconfig"; sourceTree = "<group>"; };
+		DED294C3D82DBAE96CC538FB /* Pods-quovieIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOS/Pods-quovieIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EADC3D9C80C9B02726802B8F /* Pods_quovieIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quovieIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8E9347C1C7BCCAFC0F53ED /* Pods_quovieIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3B6F53DCDD0969B939880D /* Pods_quovieIOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0C4F76AF62A3A5601196FD7 /* Pods_quovieIOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0989ACE929798BE425F41C46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EADC3D9C80C9B02726802B8F /* Pods_quovieIOS.framework */,
+				109D450AC3F0E6DCB385F996 /* Pods_quovieIOSTests.framework */,
+				1C4AE76A48780F2EC25FDD3A /* Pods_quovieIOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		83EEE5CB20379F1600C99E9C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				83EEE5EB20379F1600C99E9C /* quovieIOSTests */,
 				83EEE5F620379F1600C99E9C /* quovieIOSUITests */,
 				83EEE5D520379F1600C99E9C /* Products */,
+				B058BDCD2230C908B0CCC592 /* Pods */,
+				0989ACE929798BE425F41C46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +132,13 @@
 			children = (
 				83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */,
 				83EEE5D720379F1600C99E9C /* AppDelegate.swift */,
-				83EEE5D920379F1600C99E9C /* ViewController.swift */,
 				83EEE5DB20379F1600C99E9C /* Main.storyboard */,
 				83EEE5DE20379F1600C99E9C /* Assets.xcassets */,
 				83EEE5E020379F1600C99E9C /* LaunchScreen.storyboard */,
 				83EEE5E320379F1600C99E9C /* Info.plist */,
+				8321DCF42037AB62007E59FB /* QuovieMainPage.swift */,
+				8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */,
+				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
 			);
 			path = quovieIOS;
 			sourceTree = "<group>";
@@ -128,6 +161,19 @@
 			path = quovieIOSUITests;
 			sourceTree = "<group>";
 		};
+		B058BDCD2230C908B0CCC592 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DED294C3D82DBAE96CC538FB /* Pods-quovieIOS.debug.xcconfig */,
+				D9895B25781DE5020B1D4105 /* Pods-quovieIOS.release.xcconfig */,
+				BDDA70CAC1BF7DAE772E2BF6 /* Pods-quovieIOSTests.debug.xcconfig */,
+				BD02F0827D05428876F92DBC /* Pods-quovieIOSTests.release.xcconfig */,
+				D2F573C07F5FAD249A65C4BF /* Pods-quovieIOSUITests.debug.xcconfig */,
+				4B791D899C329406D315D1F4 /* Pods-quovieIOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83EEE5FC20379F1600C99E9C /* Build configuration list for PBXNativeTarget "quovieIOS" */;
 			buildPhases = (
+				91CF352D431DDF26F57752F8 /* [CP] Check Pods Manifest.lock */,
 				83EEE5D020379F1600C99E9C /* Sources */,
 				83EEE5D120379F1600C99E9C /* Frameworks */,
 				83EEE5D220379F1600C99E9C /* Resources */,
+				F3A8E14917998D2B42C92B16 /* [CP] Embed Pods Frameworks */,
+				8DCDEF5E9BB96E269938F6AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83EEE5FF20379F1600C99E9C /* Build configuration list for PBXNativeTarget "quovieIOSTests" */;
 			buildPhases = (
+				EC4925B4A94386A9BCA1034B /* [CP] Check Pods Manifest.lock */,
 				83EEE5E420379F1600C99E9C /* Sources */,
 				83EEE5E520379F1600C99E9C /* Frameworks */,
 				83EEE5E620379F1600C99E9C /* Resources */,
+				FB730173196128FB9BB4778D /* [CP] Embed Pods Frameworks */,
+				82D01BA968719A6AB37F6A15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83EEE60220379F1600C99E9C /* Build configuration list for PBXNativeTarget "quovieIOSUITests" */;
 			buildPhases = (
+				AADAADB29FDED0A6406270E4 /* [CP] Check Pods Manifest.lock */,
 				83EEE5EF20379F1600C99E9C /* Sources */,
 				83EEE5F020379F1600C99E9C /* Frameworks */,
 				83EEE5F120379F1600C99E9C /* Resources */,
+				E90E28757C8BB504BC1A1E12 /* [CP] Embed Pods Frameworks */,
+				1CE9DA881262E34C472030DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,12 +313,166 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CE9DA881262E34C472030DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOSUITests/Pods-quovieIOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82D01BA968719A6AB37F6A15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOSTests/Pods-quovieIOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DCDEF5E9BB96E269938F6AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOS/Pods-quovieIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91CF352D431DDF26F57752F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quovieIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AADAADB29FDED0A6406270E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quovieIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90E28757C8BB504BC1A1E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOSUITests/Pods-quovieIOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC4925B4A94386A9BCA1034B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quovieIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3A8E14917998D2B42C92B16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOS/Pods-quovieIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOS/Pods-quovieIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB730173196128FB9BB4778D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quovieIOSTests/Pods-quovieIOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83EEE5D020379F1600C99E9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EEE5DA20379F1600C99E9C /* ViewController.swift in Sources */,
+				8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */,
+				8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */,
+				8321DCF92037ABBC007E59FB /* ProfilePage.swift in Sources */,
 				83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +637,7 @@
 		};
 		83EEE5FD20379F1600C99E9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DED294C3D82DBAE96CC538FB /* Pods-quovieIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +653,7 @@
 		};
 		83EEE5FE20379F1600C99E9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9895B25781DE5020B1D4105 /* Pods-quovieIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +669,7 @@
 		};
 		83EEE60020379F1600C99E9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDA70CAC1BF7DAE772E2BF6 /* Pods-quovieIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +687,7 @@
 		};
 		83EEE60120379F1600C99E9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD02F0827D05428876F92DBC /* Pods-quovieIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +705,7 @@
 		};
 		83EEE60320379F1600C99E9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F573C07F5FAD249A65C4BF /* Pods-quovieIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +722,7 @@
 		};
 		83EEE60420379F1600C99E9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B791D899C329406D315D1F4 /* Pods-quovieIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

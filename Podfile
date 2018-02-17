@@ -17,4 +17,6 @@ target 'quovieIOS' do
     # Pods for testing
   end
 
+    pod 'Firebase/Core'
+
 end

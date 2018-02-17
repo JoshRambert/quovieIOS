@@ -1,0 +1,6 @@
+framework module Pods_quovieIOS {
+  umbrella header "Pods-quovieIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
