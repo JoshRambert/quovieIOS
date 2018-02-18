@@ -10,5 +10,8 @@ import Foundation
 import UIKit
 
 class QuovieMainPage : UIViewController {
-    
+    //Call the parse data classes
+    override func viewDidLoad() {
+        ParseSports.shared.getSports()
+    }
 }

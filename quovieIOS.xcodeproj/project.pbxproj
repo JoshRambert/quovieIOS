@@ -10,6 +10,13 @@
 		8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF42037AB62007E59FB /* QuovieMainPage.swift */; };
 		8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */; };
 		8321DCF92037ABBC007E59FB /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF82037ABBC007E59FB /* ProfilePage.swift */; };
+		8321DCFC2037C4A3007E59FB /* ParseSports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCFB2037C4A3007E59FB /* ParseSports.swift */; };
+		8321DCFE2037C4D3007E59FB /* ConfigClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCFD2037C4D3007E59FB /* ConfigClass.swift */; };
+		8321DD002038F304007E59FB /* ParseTech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCFF2038F304007E59FB /* ParseTech.swift */; };
+		8321DD022038F8FC007E59FB /* ParseFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD012038F8FC007E59FB /* ParseFinance.swift */; };
+		8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD032038FE32007E59FB /* ParseLifeStyle.swift */; };
+		8321DD06203905A7007E59FB /* ParseBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD05203905A7007E59FB /* ParseBI.swift */; };
+		8321DD082039061F007E59FB /* ParseBuzzFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD072039061F007E59FB /* ParseBuzzFeed.swift */; };
 		83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5D720379F1600C99E9C /* AppDelegate.swift */; };
 		83EEE5DD20379F1600C99E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DB20379F1600C99E9C /* Main.storyboard */; };
 		83EEE5DF20379F1600C99E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DE20379F1600C99E9C /* Assets.xcassets */; };
@@ -46,6 +53,13 @@
 		8321DCF42037AB62007E59FB /* QuovieMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuovieMainPage.swift; sourceTree = "<group>"; };
 		8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNewsArticles.swift; sourceTree = "<group>"; };
 		8321DCF82037ABBC007E59FB /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		8321DCFB2037C4A3007E59FB /* ParseSports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseSports.swift; sourceTree = "<group>"; };
+		8321DCFD2037C4D3007E59FB /* ConfigClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigClass.swift; sourceTree = "<group>"; };
+		8321DCFF2038F304007E59FB /* ParseTech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseTech.swift; sourceTree = "<group>"; };
+		8321DD012038F8FC007E59FB /* ParseFinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseFinance.swift; sourceTree = "<group>"; };
+		8321DD032038FE32007E59FB /* ParseLifeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseLifeStyle.swift; sourceTree = "<group>"; };
+		8321DD05203905A7007E59FB /* ParseBI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseBI.swift; sourceTree = "<group>"; };
+		8321DD072039061F007E59FB /* ParseBuzzFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseBuzzFeed.swift; sourceTree = "<group>"; };
 		83EEE5D420379F1600C99E9C /* quovieIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quovieIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EEE5D720379F1600C99E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EEE5DC20379F1600C99E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +119,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8321DCFA2037C480007E59FB /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				8321DCFB2037C4A3007E59FB /* ParseSports.swift */,
+				8321DCFF2038F304007E59FB /* ParseTech.swift */,
+				8321DD012038F8FC007E59FB /* ParseFinance.swift */,
+				8321DD032038FE32007E59FB /* ParseLifeStyle.swift */,
+				8321DD05203905A7007E59FB /* ParseBI.swift */,
+				8321DD072039061F007E59FB /* ParseBuzzFeed.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
 		83EEE5CB20379F1600C99E9C = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +157,7 @@
 		83EEE5D620379F1600C99E9C /* quovieIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8321DCFA2037C480007E59FB /* Parsers */,
 				83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */,
 				83EEE5D720379F1600C99E9C /* AppDelegate.swift */,
 				83EEE5DB20379F1600C99E9C /* Main.storyboard */,
@@ -139,6 +167,7 @@
 				8321DCF42037AB62007E59FB /* QuovieMainPage.swift */,
 				8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */,
 				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
+				8321DCFD2037C4D3007E59FB /* ConfigClass.swift */,
 			);
 			path = quovieIOS;
 			sourceTree = "<group>";
@@ -472,9 +501,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */,
+				8321DD002038F304007E59FB /* ParseTech.swift in Sources */,
+				8321DD06203905A7007E59FB /* ParseBI.swift in Sources */,
 				8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */,
+				8321DCFC2037C4A3007E59FB /* ParseSports.swift in Sources */,
 				8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */,
+				8321DD022038F8FC007E59FB /* ParseFinance.swift in Sources */,
 				8321DCF92037ABBC007E59FB /* ProfilePage.swift in Sources */,
+				8321DCFE2037C4D3007E59FB /* ConfigClass.swift in Sources */,
+				8321DD082039061F007E59FB /* ParseBuzzFeed.swift in Sources */,
 				83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
