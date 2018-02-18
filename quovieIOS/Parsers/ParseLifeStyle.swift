@@ -58,7 +58,7 @@ public class ParseLifestyle {
                     //call the function here that will add all the data to the database
                 })
             }
-        })
+        }).resume()
     }
     //Create the function that will add it to the database
     func writeLS(){

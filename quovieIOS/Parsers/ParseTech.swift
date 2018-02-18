@@ -90,5 +90,5 @@ public class ParseTech {
     }
     
     //MARK -- shared class
-    static let shared = ParseSports();
+    static let shared = ParseTech();
 }

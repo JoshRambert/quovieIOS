@@ -44,7 +44,6 @@ public class ParseSports {
                                 self.sportsTitles.append((title as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
-                                //add them to the local array
                                 self.sportsUrlImages.append((urlImages as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){

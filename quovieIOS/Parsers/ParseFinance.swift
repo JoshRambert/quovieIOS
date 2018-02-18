@@ -62,7 +62,7 @@ public class ParseFinance {
                     
                 })
             }
-        })
+        }).resume()
     }
     
     func writeFinance(){

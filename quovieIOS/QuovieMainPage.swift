@@ -13,5 +13,10 @@ class QuovieMainPage : UIViewController {
     //Call the parse data classes
     override func viewDidLoad() {
         ParseSports.shared.getSports()
+        ParseTech.shared.getTech()
+        ParseFinance.shared.getFinance()
+        ParseLifestyle.shared.getLifeStyle()
+        ParseBI.shared.getBusinessInsider()
+        ParseBuzzFeed.shared.getBuzzFeed()
     }
 }
