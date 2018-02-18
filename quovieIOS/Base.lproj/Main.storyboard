@@ -33,14 +33,64 @@
                     <view key="view" contentMode="scaleToFill" id="g1s-dD-6h0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRM-j7-tdc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Quovie" id="tAb-kJ-WQw"/>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-Lf-6bF">
+                                <rect key="frame" x="16" y="60" width="343" height="574"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hj3-3B-2v4">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collection_cell" id="eTO-h5-koS" customClass="NewsViewCells" customModule="quovieIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-Cv-ef4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="NewsImage" destination="nwB-Cv-ef4" id="Rmd-2K-hdz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xjh-Lf-6bF" firstAttribute="bottom" secondItem="9yc-SM-nU1" secondAttribute="bottom" constant="16" id="4hf-wi-aIh"/>
+                            <constraint firstItem="xjh-Lf-6bF" firstAttribute="top" secondItem="qRM-j7-tdc" secondAttribute="bottom" constant="16" id="FGm-SY-xAv"/>
+                            <constraint firstItem="xjh-Lf-6bF" firstAttribute="leading" secondItem="9yc-SM-nU1" secondAttribute="leading" constant="16" id="LH0-Cj-s9g"/>
+                            <constraint firstItem="9yc-SM-nU1" firstAttribute="trailing" secondItem="xjh-Lf-6bF" secondAttribute="trailing" constant="16" id="Ngf-xz-1Uj"/>
+                            <constraint firstItem="qRM-j7-tdc" firstAttribute="trailing" secondItem="9yc-SM-nU1" secondAttribute="trailing" id="VfD-yk-IdB"/>
+                            <constraint firstItem="qRM-j7-tdc" firstAttribute="leading" secondItem="9yc-SM-nU1" secondAttribute="leading" id="ebA-e4-fJq"/>
+                            <constraint firstItem="qRM-j7-tdc" firstAttribute="top" secondItem="g1s-dD-6h0" secondAttribute="top" id="vEL-Ju-kBm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9yc-SM-nU1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="Oy4-O7-S3f"/>
+                    <connections>
+                        <outlet property="NewsCollectionView" destination="xjh-Lf-6bF" id="ABA-d8-tvY"/>
+                        <outlet property="NewsCollectionViewCell" destination="xjh-Lf-6bF" id="wDd-m7-5tw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tub-ZY-JLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="-1075"/>
+            <point key="canvasLocation" x="-39.200000000000003" y="-1075.4122938530736"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BgM-Et-eZB">

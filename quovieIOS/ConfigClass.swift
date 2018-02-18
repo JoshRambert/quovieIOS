@@ -15,7 +15,7 @@ public class ConfigClass {
     let SPORTS_URL = "https://newsapi.org/v2/top-headlines?sources=bbc-sport&apiKey=b58181b5d3674ec38753867894405f2c"
     let TECH_URL = "https://newsapi.org/v2/top-headlines?sources=the-next-web&apiKey=b58181b5d3674ec38753867894405f2c"
     let LS_URL = "https://newsapi.org/v2/top-headlines?sources=the-telegraph&apiKey=b58181b5d3674ec38753867894405f2c"
-    let FINANCE_URL = "https://newsapi.org/v2/top-headlines?sources=the-wall-street-journal&apiKey=b58181b5d3674ec38753867894405f2c"
+    let FINANCE_URL = "https://newsapi.org/v2/top-headlines?sources=the-economist&apiKey=b58181b5d3674ec38753867894405f2c"
     let BI_URL = "https://newsapi.org/v2/top-headlines?sources=business-insider&apiKey=b58181b5d3674ec38753867894405f2c"
     //let BBC_NEWS = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=b58181b5d3674ec38753867894405f2c"
     

@@ -17,6 +17,7 @@
 		8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD032038FE32007E59FB /* ParseLifeStyle.swift */; };
 		8321DD06203905A7007E59FB /* ParseBI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD05203905A7007E59FB /* ParseBI.swift */; };
 		8321DD082039061F007E59FB /* ParseBuzzFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD072039061F007E59FB /* ParseBuzzFeed.swift */; };
+		8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD0A20398984007E59FB /* NewsViewCells.swift */; };
 		83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5D720379F1600C99E9C /* AppDelegate.swift */; };
 		83EEE5DD20379F1600C99E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DB20379F1600C99E9C /* Main.storyboard */; };
 		83EEE5DF20379F1600C99E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DE20379F1600C99E9C /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		8321DD032038FE32007E59FB /* ParseLifeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseLifeStyle.swift; sourceTree = "<group>"; };
 		8321DD05203905A7007E59FB /* ParseBI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseBI.swift; sourceTree = "<group>"; };
 		8321DD072039061F007E59FB /* ParseBuzzFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseBuzzFeed.swift; sourceTree = "<group>"; };
+		8321DD0A20398984007E59FB /* NewsViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCells.swift; sourceTree = "<group>"; };
 		83EEE5D420379F1600C99E9C /* quovieIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quovieIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EEE5D720379F1600C99E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EEE5DC20379F1600C99E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Parsers;
 			sourceTree = "<group>";
 		};
+		8321DD0920398954007E59FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8321DD0A20398984007E59FB /* NewsViewCells.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		83EEE5CB20379F1600C99E9C = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		83EEE5D620379F1600C99E9C /* quovieIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8321DD0920398954007E59FB /* Cells */,
 				8321DCFA2037C480007E59FB /* Parsers */,
 				83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */,
 				83EEE5D720379F1600C99E9C /* AppDelegate.swift */,
@@ -502,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */,
+				8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */,
 				8321DD002038F304007E59FB /* ParseTech.swift in Sources */,
 				8321DD06203905A7007E59FB /* ParseBI.swift in Sources */,
 				8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */,

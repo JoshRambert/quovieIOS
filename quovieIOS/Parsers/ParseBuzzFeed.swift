@@ -59,6 +59,7 @@ public class ParseBuzzFeed {
                 }
                 OperationQueue.main.addOperation({
                     //Call a function here that will add all the data to the database
+                    self.writeBuzzFeed()
                 })
             }
         }).resume()
