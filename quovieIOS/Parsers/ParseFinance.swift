@@ -59,7 +59,7 @@ public class ParseFinance {
                 }
                 OperationQueue.main.addOperation ({
                     //call the function here that will add all the data to the database
-                    
+                    self.writeFinance()
                 })
             }
         }).resume()

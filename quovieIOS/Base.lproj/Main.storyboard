@@ -41,7 +41,7 @@
                                 </items>
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-Lf-6bF">
-                                <rect key="frame" x="16" y="60" width="343" height="574"/>
+                                <rect key="frame" x="16" y="60" width="343" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hj3-3B-2v4">
                                     <size key="itemSize" width="150" height="150"/>
@@ -72,7 +72,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xjh-Lf-6bF" firstAttribute="bottom" secondItem="9yc-SM-nU1" secondAttribute="bottom" constant="16" id="4hf-wi-aIh"/>
+                            <constraint firstItem="xjh-Lf-6bF" firstAttribute="bottom" secondItem="9yc-SM-nU1" secondAttribute="bottom" constant="-16" id="4hf-wi-aIh"/>
                             <constraint firstItem="xjh-Lf-6bF" firstAttribute="top" secondItem="qRM-j7-tdc" secondAttribute="bottom" constant="16" id="FGm-SY-xAv"/>
                             <constraint firstItem="xjh-Lf-6bF" firstAttribute="leading" secondItem="9yc-SM-nU1" secondAttribute="leading" constant="16" id="LH0-Cj-s9g"/>
                             <constraint firstItem="9yc-SM-nU1" firstAttribute="trailing" secondItem="xjh-Lf-6bF" secondAttribute="trailing" constant="16" id="Ngf-xz-1Uj"/>
@@ -85,7 +85,6 @@
                     <tabBarItem key="tabBarItem" title="Home" id="Oy4-O7-S3f"/>
                     <connections>
                         <outlet property="NewsCollectionView" destination="xjh-Lf-6bF" id="ABA-d8-tvY"/>
-                        <outlet property="NewsCollectionViewCell" destination="xjh-Lf-6bF" id="wDd-m7-5tw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tub-ZY-JLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
