@@ -23,7 +23,7 @@ class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectio
         ParseFinance.shared.getFinance()
         
         let layout = self.NewsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
+        layout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5)
         layout.minimumInteritemSpacing = 5
         layout.itemSize = CGSize(width: (self.NewsCollectionView.frame.size.width - 20)/2.0, height: (self.NewsCollectionView.frame.size.height - 20)/3.0)
         

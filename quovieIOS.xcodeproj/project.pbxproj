@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83089609203C153D00881E90 /* GetBitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83089608203C153D00881E90 /* GetBitmap.swift */; };
+		8308960B203C1ED500881E90 /* DisplayNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8308960A203C1ED500881E90 /* DisplayNewsCell.swift */; };
 		8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF42037AB62007E59FB /* QuovieMainPage.swift */; };
 		8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */; };
 		8321DCF92037ABBC007E59FB /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DCF82037ABBC007E59FB /* ProfilePage.swift */; };
@@ -51,6 +53,8 @@
 		109D450AC3F0E6DCB385F996 /* Pods_quovieIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quovieIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4AE76A48780F2EC25FDD3A /* Pods_quovieIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quovieIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B791D899C329406D315D1F4 /* Pods-quovieIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quovieIOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-quovieIOSUITests/Pods-quovieIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		83089608203C153D00881E90 /* GetBitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBitmap.swift; sourceTree = "<group>"; };
+		8308960A203C1ED500881E90 /* DisplayNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNewsCell.swift; sourceTree = "<group>"; };
 		8321DCF42037AB62007E59FB /* QuovieMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuovieMainPage.swift; sourceTree = "<group>"; };
 		8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNewsArticles.swift; sourceTree = "<group>"; };
 		8321DCF82037ABBC007E59FB /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8321DD0A20398984007E59FB /* NewsViewCells.swift */,
+				8308960A203C1ED500881E90 /* DisplayNewsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */,
 				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
 				8321DCFD2037C4D3007E59FB /* ConfigClass.swift */,
+				83089608203C153D00881E90 /* GetBitmap.swift */,
 			);
 			path = quovieIOS;
 			sourceTree = "<group>";
@@ -519,6 +525,8 @@
 				8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */,
 				8321DCFC2037C4A3007E59FB /* ParseSports.swift in Sources */,
 				8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */,
+				8308960B203C1ED500881E90 /* DisplayNewsCell.swift in Sources */,
+				83089609203C153D00881E90 /* GetBitmap.swift in Sources */,
 				8321DD022038F8FC007E59FB /* ParseFinance.swift in Sources */,
 				8321DCF92037ABBC007E59FB /* ProfilePage.swift in Sources */,
 				8321DCFE2037C4D3007E59FB /* ConfigClass.swift in Sources */,

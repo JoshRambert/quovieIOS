@@ -68,7 +68,7 @@ public class ParseBI {
         mRootRef = Database.database().reference();
         
         let mNewsRef = mRootRef.child("News IOS");
-        let mBiRef = mNewsRef.child("Business Insider")
+        let mBiRef = mNewsRef.child("BusinessInsider")
         let mTitles = mBiRef.child("Titles")
         mTitles.setValue(self.biTitles);
         
