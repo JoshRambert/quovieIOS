@@ -34,30 +34,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-Lf-6bF">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-Lf-6bF">
                                 <rect key="frame" x="0.0" y="60" width="375" height="558"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hj3-3B-2v4">
-                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="itemSize" width="170" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" reuseIdentifier="collection_cell" id="eTO-h5-koS" customClass="NewsViewCells" customModule="quovieIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-Cv-ef4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-Cv-ef4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="nwB-Cv-ef4" secondAttribute="trailing" id="BQq-IM-fYD"/>
+                                            <constraint firstItem="nwB-Cv-ef4" firstAttribute="top" secondItem="eTO-h5-koS" secondAttribute="top" id="GfB-BR-QCf"/>
+                                            <constraint firstItem="nwB-Cv-ef4" firstAttribute="leading" secondItem="eTO-h5-koS" secondAttribute="leading" id="OaJ-Lp-NcR"/>
+                                            <constraint firstAttribute="bottom" secondItem="nwB-Cv-ef4" secondAttribute="bottom" id="WCh-qz-qha"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="NewsImage" destination="nwB-Cv-ef4" id="Rmd-2K-hdz"/>
                                         </connections>
@@ -65,7 +70,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="Ya7-OH-VNm" id="UdX-GX-b6S"/>
-                                    <outlet property="delegate" destination="Ya7-OH-VNm" id="NRK-Ed-Grg"/>
+                                    <outlet property="delegate" destination="Ya7-OH-VNm" id="2Vg-4v-uoA"/>
                                 </connections>
                             </collectionView>
                         </subviews>
