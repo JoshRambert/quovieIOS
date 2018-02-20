@@ -24,6 +24,11 @@ class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectio
         
         self.NewsCollectionView.delegate = self
         self.NewsCollectionView.dataSource = self
+        
+        var layout = self.NewsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize(width: (self.NewsCollectionView.frame.size.width - 20)/2, height: (self.NewsCollectionView.frame.size.height - 20)/3)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,9 +43,19 @@ class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.width
-        return CGSize(width: (width - 10)/3, height: (width - 10)/3) // width & height are the same to make a square cell
+        
+        //Get the height and width of the screen
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        
+        //set the width and height of the collection view
+        return CGSize(width: (screenWidth-20)/2, height: (screenHeight-20)/3)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selected item is", images[indexPath.row])
+    }
+    
     //MARK: Outlets
     @IBOutlet weak var NewsCollectionView: UICollectionView!
 }

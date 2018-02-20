@@ -28,9 +28,6 @@ public class ParseSports {
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
                 
-                //Printing the JSON to the console
-                print(jsonObj!.value(forKey: ConfigClass.shared.JSON_ARRAY)!)
-                
                 //Getting the array and converting it into the local array
                 if let articlesArray = jsonObj!.value(forKey: ConfigClass.shared.JSON_ARRAY) as? NSArray {
                     //Looping through the elements

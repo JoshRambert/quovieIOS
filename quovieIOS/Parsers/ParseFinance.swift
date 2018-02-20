@@ -27,9 +27,6 @@ public class ParseFinance {
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
                 
-                //Print the JSON to the console
-                print(jsonObj!.value(forKey: ConfigClass.shared.JSON_ARRAY)!)
-                
                 //gettingt he array and converting it into the local array
                 if let articlesArray = jsonObj!.value(forKey: ConfigClass.shared.JSON_ARRAY) as? NSArray {
                     //looping through the elements
