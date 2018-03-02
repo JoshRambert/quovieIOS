@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ9-Jq-Uho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="-410"/>
+            <point key="canvasLocation" x="-39" y="-319"/>
         </scene>
         <!--Home-->
         <scene sceneID="D8T-HG-UDq">
@@ -87,12 +87,12 @@
                     <tabBarItem key="tabBarItem" title="Home" id="Oy4-O7-S3f"/>
                     <connections>
                         <outlet property="NewsCollectionView" destination="xjh-Lf-6bF" id="ABA-d8-tvY"/>
-                        <segue destination="BYZ-38-t0r" kind="push" id="3cK-12-Sep"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="DisplayNewsSegue" id="3cK-12-Sep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tub-ZY-JLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39.200000000000003" y="-1075.4122938530736"/>
+            <point key="canvasLocation" x="-39" y="-1075"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gfm-TX-EFs">
@@ -151,11 +151,11 @@
                                 <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="280" id="Tch-cR-7zO" customClass="DisplayNewsCells" customModule="quovieIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="280"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayNewsCells" rowHeight="300" id="Tch-cR-7zO" customClass="DisplayNewsCells" customModule="quovieIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tch-cR-7zO" id="3Hs-6A-dSJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMN-a0-scL">
@@ -168,14 +168,14 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-cW-6mT">
                                                     <rect key="frame" x="17" y="228" width="340" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="340" id="pDm-iX-qBH"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="pDm-iX-qBH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YN-y1-Oly">
-                                                    <rect key="frame" x="17" y="248" width="340" height="22"/>
+                                                    <rect key="frame" x="17" y="248" width="340" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="340" id="Axc-Db-41O"/>
                                                     </constraints>

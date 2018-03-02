@@ -19,11 +19,13 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     @IBOutlet private weak var DisplayNewsTable: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return ConfigClass.shared.dbTitles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DisplayNewsCells") as! DisplayNewsCells
+        
+        return cell
     }
     
     //Get the database references
