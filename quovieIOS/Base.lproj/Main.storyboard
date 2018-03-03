@@ -39,14 +39,14 @@
                                 <rect key="frame" x="0.0" y="60" width="375" height="558"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="Hj3-3B-2v4">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hj3-3B-2v4">
                                     <size key="itemSize" width="170" height="170"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" reuseIdentifier="collection_cell" id="eTO-h5-koS" customClass="NewsViewCells" customModule="quovieIOS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collection_cell" id="eTO-h5-koS" customClass="NewsViewCells" customModule="quovieIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -56,16 +56,28 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwB-Cv-ef4">
                                                     <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="1" verticalHuggingPriority="1" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jed-RV-rM9">
+                                                    <rect key="frame" x="18" y="103" width="134" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="nwB-Cv-ef4" secondAttribute="trailing" id="BQq-IM-fYD"/>
                                             <constraint firstItem="nwB-Cv-ef4" firstAttribute="top" secondItem="eTO-h5-koS" secondAttribute="top" id="GfB-BR-QCf"/>
+                                            <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="jed-RV-rM9" secondAttribute="bottom" constant="38" id="HUI-yj-DXr"/>
                                             <constraint firstItem="nwB-Cv-ef4" firstAttribute="leading" secondItem="eTO-h5-koS" secondAttribute="leading" id="OaJ-Lp-NcR"/>
                                             <constraint firstAttribute="bottom" secondItem="nwB-Cv-ef4" secondAttribute="bottom" id="WCh-qz-qha"/>
+                                            <constraint firstItem="jed-RV-rM9" firstAttribute="top" secondItem="eTO-h5-koS" secondAttribute="topMargin" constant="95" id="XOp-Hf-dcy"/>
+                                            <constraint firstItem="jed-RV-rM9" firstAttribute="leading" secondItem="eTO-h5-koS" secondAttribute="leadingMargin" constant="10" id="hmR-tQ-teX"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="jed-RV-rM9" secondAttribute="trailing" constant="10" id="vnn-t5-DXr"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="NewsImage" destination="nwB-Cv-ef4" id="Rmd-2K-hdz"/>
+                                            <outlet property="NewsTopic" destination="jed-RV-rM9" id="mFM-DO-TcF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

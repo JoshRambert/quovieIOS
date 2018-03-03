@@ -13,6 +13,7 @@ class NewsViewCells: UICollectionViewCell {
     
     //MARK -- The image outlet
     @IBOutlet public weak var NewsImage: UIImageView!
+    @IBOutlet public weak var NewsTopic: UILabel!
     
     static let shared = NewsViewCells();
 }
