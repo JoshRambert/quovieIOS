@@ -48,6 +48,9 @@ public class ParseLifestyle {
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
                                 self.lsAuthors.append((authors as? String)!)
                             }
+                            if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
+                                self.lsContent.append((content as? String)!)
+                            }
                         }
                     }
                 }

@@ -55,6 +55,9 @@ class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected item is", images[indexPath.row])
+        
+        //Send the string over to the DisplayNews Page to get that news topic data
+        
     }
     
     //MARK: Outlets

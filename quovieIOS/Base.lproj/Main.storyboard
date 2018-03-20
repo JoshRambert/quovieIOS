@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -163,13 +164,19 @@
                                 <rect key="frame" x="0.0" y="62" width="375" height="605"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayNewsCells" rowHeight="300" id="Tch-cR-7zO" customClass="DisplayNewsCells" customModule="quovieIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DisplayNewsCells" rowHeight="320" id="Tch-cR-7zO" customClass="DisplayNewsCells" customModule="quovieIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tch-cR-7zO" id="3Hs-6A-dSJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="319.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website URl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOr-g0-cVM">
+                                                    <rect key="frame" x="166" y="109" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMN-a0-scL">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                                     <constraints>
@@ -187,7 +194,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YN-y1-Oly">
-                                                    <rect key="frame" x="17" y="248" width="340" height="42"/>
+                                                    <rect key="frame" x="17" y="250" width="340" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="340" id="Axc-Db-41O"/>
                                                     </constraints>
@@ -195,19 +202,40 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVL-kL-1fX">
+                                                    <rect key="frame" x="15" y="289" width="51.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.24734373392201769" blue="0.026357754246822629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="wVL-kL-1fX" secondAttribute="trailing" multiplier="1000" priority="1" constant="250" id="23F-2P-fDN"/>
                                                 <constraint firstAttribute="trailing" secondItem="bMN-a0-scL" secondAttribute="trailing" id="2TX-U3-wVP"/>
+                                                <constraint firstItem="wVL-kL-1fX" firstAttribute="top" secondItem="Thl-cW-6mT" secondAttribute="bottom" constant="40" id="4HS-4Y-GcN"/>
+                                                <constraint firstItem="MOr-g0-cVM" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leadingMargin" constant="151" id="5tZ-t5-SE4"/>
+                                                <constraint firstItem="wVL-kL-1fX" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leading" constant="15" id="8aA-AO-8lQ"/>
                                                 <constraint firstItem="bMN-a0-scL" firstAttribute="top" secondItem="3Hs-6A-dSJ" secondAttribute="top" id="Bar-Z3-rST"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="top" secondItem="bMN-a0-scL" secondAttribute="bottom" constant="8" id="H6t-ve-Fv9"/>
                                                 <constraint firstItem="bMN-a0-scL" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leading" id="KCf-3q-m5n"/>
-                                                <constraint firstItem="7YN-y1-Oly" firstAttribute="top" secondItem="bMN-a0-scL" secondAttribute="bottom" constant="28" id="Q6r-Rj-WJG"/>
+                                                <constraint firstAttribute="bottom" secondItem="wVL-kL-1fX" secondAttribute="bottom" constant="9.5" id="Kbp-FY-CJt"/>
+                                                <constraint firstItem="7YN-y1-Oly" firstAttribute="top" secondItem="bMN-a0-scL" secondAttribute="bottom" constant="30" id="Q6r-Rj-WJG"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="trailing" secondItem="7YN-y1-Oly" secondAttribute="trailing" id="Tg3-fN-4We"/>
+                                                <constraint firstItem="MOr-g0-cVM" firstAttribute="top" secondItem="3Hs-6A-dSJ" secondAttribute="topMargin" constant="98" id="W6h-ml-i7V"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="centerX" secondItem="bMN-a0-scL" secondAttribute="centerX" id="g7a-sl-E6k"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="MOr-g0-cVM" secondAttribute="trailing" constant="152" id="g7n-2v-iwe"/>
+                                                <constraint firstItem="Thl-cW-6mT" firstAttribute="top" secondItem="MOr-g0-cVM" secondAttribute="bottom" constant="98" id="k82-Ie-0Qr"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="leading" secondItem="7YN-y1-Oly" secondAttribute="leading" id="v0C-8m-LmF"/>
-                                                <constraint firstItem="7YN-y1-Oly" firstAttribute="bottom" secondItem="3Hs-6A-dSJ" secondAttribute="bottomMargin" constant="1" id="wzH-jG-EcM"/>
+                                                <constraint firstItem="7YN-y1-Oly" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3Hs-6A-dSJ" secondAttribute="bottomMargin" constant="1" id="wzH-jG-EcM"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hiddenWebsiteUrl" destination="MOr-g0-cVM" id="UyM-Ed-2bH"/>
+                                            <outlet property="newsAuthor" destination="wVL-kL-1fX" id="m3P-n7-4K9"/>
+                                            <outlet property="newsContent" destination="7YN-y1-Oly" id="guv-Fr-1PS"/>
+                                            <outlet property="newsImage" destination="bMN-a0-scL" id="Bf6-qL-YX0"/>
+                                            <outlet property="newsTitle" destination="Thl-cW-6mT" id="Chg-Ap-Ops"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

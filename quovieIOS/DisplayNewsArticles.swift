@@ -25,6 +25,17 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DisplayNewsCells") as! DisplayNewsCells
         
+        //Get the array of news data from the Shared configuration class
+        let newsTitles = ConfigClass.shared.dbTitles
+        let newsContent = ConfigClass.shared.dbContent
+        let newsAuthors = ConfigClass.shared.dbAuthors
+        let newsImages = ConfigClass.shared.dbUrlImages
+        let newsWebsites = ConfigClass.shared.dbWebsites
+        
+        cell.getTitle(forTitle: newsTitles[indexPath.row])
+        cell.getContent(forContent: newsContent[indexPath.row])
+        cell.getWebsites(forWebsite: newsWebsites[indexPath.row])
+        cell.getAuthors(forAuthor: newsAuthors[indexPath.row])
         return cell
     }
     
