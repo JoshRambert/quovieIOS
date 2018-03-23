@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+final class QuovieMainPage : UICollectionViewController {
     //Assign the images from the assests file
     var images = ["Sports", "Tech", "Lifestyle", "Finance", "BusinessInsider", "BuzzFeed"]
     var topicTitles = ["Sports", "Technology", "Lifestyle", "Finance", "Business Insider", "BuzzFeed"]
@@ -22,38 +22,25 @@ class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectio
         ParseBI.shared.getBusinessInsider()
         ParseBuzzFeed.shared.getBuzzFeed()
         ParseFinance.shared.getFinance()
-        
-        //Call the layout cells function
-        layoutCells()
     }
-    
-    func layoutCells(){
-        let layout = self.NewsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: (self.NewsCollectionView.frame.size.width - 20)/2.0, height: (self.NewsCollectionView.frame.size.height - 20)/3.0)
-        
-        self.NewsCollectionView.delegate = self
-        self.NewsCollectionView.dataSource = self
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_cell", for: indexPath) as! NewsViewCells
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NewsViewCells
         
-        cell.NewsImage.image = UIImage(named: images[indexPath.row])
+        cell.NewsImage?.image = UIImage(named: images[indexPath.row])
         cell.layer.cornerRadius = 10
-        cell.NewsTopic.text? = topicTitles[indexPath.row]
+        cell.NewsTopic?.text = topicTitles[indexPath.row]
         
         //Add labels to the Cells and add place the
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected item is", images[indexPath.row])
         
         //Send the string over to the DisplayNews Page to get that news topic data
@@ -61,5 +48,31 @@ class QuovieMainPage : UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     //MARK: Outlets
-    @IBOutlet weak var NewsCollectionView: UICollectionView!
+    fileprivate let reuseIdentifier = "collection_cell"
+    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 10.0, bottom: 50.0, right: 10.0)
+    fileprivate let itemsPerRow: CGFloat = 2
+    fileprivate let itemsPerColumn: CGFloat = 3
+}
+
+extension QuovieMainPage : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //add the padding for the colleciton view and the rows
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        let heightPerItem = view.frame.height / itemsPerColumn
+        
+        let cellSizes = CGSize(width: widthPerItem, height: heightPerItem)
+        
+        return cellSizes
+    }
+    
+    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
 }

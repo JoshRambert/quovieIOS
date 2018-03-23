@@ -36,6 +36,7 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         cell.getContent(forContent: newsContent[indexPath.row])
         cell.getWebsites(forWebsite: newsWebsites[indexPath.row])
         cell.getAuthors(forAuthor: newsAuthors[indexPath.row])
+        cell.getImage(forURL: newsImages[indexPath.row])
         return cell
     }
     

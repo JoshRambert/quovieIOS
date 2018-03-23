@@ -179,8 +179,8 @@
 				83EEE5DB20379F1600C99E9C /* Main.storyboard */,
 				83EEE5DE20379F1600C99E9C /* Assets.xcassets */,
 				83EEE5E020379F1600C99E9C /* LaunchScreen.storyboard */,
-				83EEE5E320379F1600C99E9C /* Info.plist */,
 				8321DCF42037AB62007E59FB /* QuovieMainPage.swift */,
+				83EEE5E320379F1600C99E9C /* Info.plist */,
 				8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */,
 				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
 				8321DCFD2037C4D3007E59FB /* ConfigClass.swift */,
@@ -702,7 +702,7 @@
 				DEVELOPMENT_TEAM = PN9Z6QQB56;
 				INFOPLIST_FILE = quovieIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = joshRambert.quovieIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = joshRambert.QuovieIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -718,7 +718,7 @@
 				DEVELOPMENT_TEAM = PN9Z6QQB56;
 				INFOPLIST_FILE = quovieIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = joshRambert.quovieIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = joshRambert.QuovieIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
