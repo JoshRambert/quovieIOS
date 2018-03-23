@@ -12,7 +12,7 @@ import UIKit
 final class QuovieMainPage : UICollectionViewController {
     //Assign the images from the assests file
     var images = ["Sports", "Tech", "Lifestyle", "Finance", "BusinessInsider", "BuzzFeed"]
-    var topicTitles = ["Sports", "Technology", "Lifestyle", "Finance", "Business Insider", "BuzzFeed"]
+    var topicTitles = ["Sports", "Technology", "Lifestyle", "Finance", "", ""]
     
     //MARK -- Lifecycle... Call the parse data classes
     override func viewDidLoad() {
@@ -49,30 +49,29 @@ final class QuovieMainPage : UICollectionViewController {
     
     //MARK: Outlets
     fileprivate let reuseIdentifier = "collection_cell"
-    fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 10.0, bottom: 50.0, right: 10.0)
+    fileprivate let sectionInsets = UIEdgeInsets(top: 30.0, left: 10.0, bottom: 30.0, right: 10.0)
     fileprivate let itemsPerRow: CGFloat = 2
     fileprivate let itemsPerColumn: CGFloat = 3
 }
 
 extension QuovieMainPage : UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //add the padding for the colleciton view and the rows
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
-        let heightPerItem = view.frame.height / itemsPerColumn
         
-        let cellSizes = CGSize(width: widthPerItem, height: heightPerItem)
+        let cellSizes = CGSize(width: widthPerItem, height: widthPerItem)
         
         return cellSizes
     }
     
-    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
     
-    func collectionView(_collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
 }
