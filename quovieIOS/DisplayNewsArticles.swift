@@ -14,10 +14,6 @@ import FirebaseDatabase
 
 class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    //MARK -- Properties
-    var NewsTopic: String! = nil
-    @IBOutlet private weak var DisplayNewsTable: UITableView!
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ConfigClass.shared.dbTitles.count
     }
@@ -37,13 +33,18 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         cell.getWebsites(forWebsite: newsWebsites[indexPath.row])
         cell.getAuthors(forAuthor: newsAuthors[indexPath.row])
         cell.getImage(forURL: newsImages[indexPath.row])
+        
         return cell
     }
     
     //Get the database references
     override func viewDidLoad() {
-        
+        //Call the read news data
+        readNewsTopic()
     }
+    
+    //Create an operation queue that'll ensure that the news is being stored within the dbArrays before being displayed
+
     
     //Create a method that will read from the database
     func readNewsTopic(){
@@ -95,4 +96,9 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
             print(error.localizedDescription)
         }
     }
+    
+    //MARK -- Properties
+    var NewsTopic = String()
+    @IBOutlet private weak var DisplayNewsTable: UITableView!
+    
 }

@@ -108,7 +108,6 @@
                                 <connections>
                                     <outlet property="NewsImage" destination="WRL-rp-RqE" id="wMD-7o-Hjw"/>
                                     <outlet property="NewsTopic" destination="Xul-bI-nlK" id="c2n-dv-WES"/>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="y45-cj-9CS"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -123,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-39" y="-1075"/>
         </scene>
-        <!--News Articles-->
+        <!--DisplayNewsArticles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DisplayNewsArticles" customModule="quovieIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DisplayNewsArticles" title="DisplayNewsArticles" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DisplayNewsArticles" customModule="quovieIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +218,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="b4l-X9-kSO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bvm-of-dQt"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -42,9 +42,12 @@ final class QuovieMainPage : UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected item is", images[indexPath.row])
-        
         //Send the string over to the DisplayNews Page to get that news topic data
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let NewsViewController = Storyboard.instantiateViewController(withIdentifier: "DisplayNewsArticles") as! DisplayNewsArticles
         
+        NewsViewController.NewsTopic = images[indexPath.row]
+        self.navigationController?.pushViewController(NewsViewController, animated: true)
     }
     
     //MARK: Outlets
