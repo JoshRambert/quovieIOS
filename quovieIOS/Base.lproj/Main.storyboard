@@ -164,27 +164,27 @@
                                                         <constraint firstAttribute="height" constant="220" id="slL-LU-Ezq"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-cW-6mT">
-                                                    <rect key="frame" x="17" y="228" width="340" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-cW-6mT">
+                                                    <rect key="frame" x="37" y="228" width="300" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="pDm-iX-qBH"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="pDm-iX-qBH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YN-y1-Oly">
-                                                    <rect key="frame" x="17" y="250" width="340" height="16"/>
+                                                    <rect key="frame" x="37" y="259" width="300" height="14.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="340" id="Axc-Db-41O"/>
+                                                        <constraint firstAttribute="width" constant="300" id="Axc-Db-41O"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVL-kL-1fX">
-                                                    <rect key="frame" x="15" y="289" width="51.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="294" width="41" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="1" green="0.24734373392201769" blue="0.026357754246822629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -192,14 +192,14 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="wVL-kL-1fX" secondAttribute="trailing" multiplier="1000" priority="1" constant="250" id="23F-2P-fDN"/>
                                                 <constraint firstAttribute="trailing" secondItem="bMN-a0-scL" secondAttribute="trailing" id="2TX-U3-wVP"/>
-                                                <constraint firstItem="wVL-kL-1fX" firstAttribute="top" secondItem="Thl-cW-6mT" secondAttribute="bottom" constant="40" id="4HS-4Y-GcN"/>
                                                 <constraint firstItem="MOr-g0-cVM" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leadingMargin" constant="151" id="5tZ-t5-SE4"/>
                                                 <constraint firstItem="wVL-kL-1fX" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leading" constant="15" id="8aA-AO-8lQ"/>
                                                 <constraint firstItem="bMN-a0-scL" firstAttribute="top" secondItem="3Hs-6A-dSJ" secondAttribute="top" id="Bar-Z3-rST"/>
+                                                <constraint firstItem="7YN-y1-Oly" firstAttribute="top" secondItem="Thl-cW-6mT" secondAttribute="bottom" constant="10" id="CY4-ht-166"/>
+                                                <constraint firstItem="wVL-kL-1fX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7YN-y1-Oly" secondAttribute="bottom" constant="15" id="FAA-fD-9wc"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="top" secondItem="bMN-a0-scL" secondAttribute="bottom" constant="8" id="H6t-ve-Fv9"/>
                                                 <constraint firstItem="bMN-a0-scL" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leading" id="KCf-3q-m5n"/>
                                                 <constraint firstAttribute="bottom" secondItem="wVL-kL-1fX" secondAttribute="bottom" constant="9.5" id="Kbp-FY-CJt"/>
-                                                <constraint firstItem="7YN-y1-Oly" firstAttribute="top" secondItem="bMN-a0-scL" secondAttribute="bottom" constant="30" id="Q6r-Rj-WJG"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="trailing" secondItem="7YN-y1-Oly" secondAttribute="trailing" id="Tg3-fN-4We"/>
                                                 <constraint firstItem="MOr-g0-cVM" firstAttribute="top" secondItem="3Hs-6A-dSJ" secondAttribute="topMargin" constant="98" id="W6h-ml-i7V"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="centerX" secondItem="bMN-a0-scL" secondAttribute="centerX" id="g7a-sl-E6k"/>
@@ -243,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="-1075"/>
+            <point key="canvasLocation" x="847" y="-1075"/>
         </scene>
     </scenes>
 </document>
