@@ -14,6 +14,12 @@ import FirebaseDatabase
 
 class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK Lifecycle
+    override func viewDidLoad() {
+        //Call the read news data
+        readNewsTopic()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ConfigClass.shared.dbTitles.count
     }
@@ -37,14 +43,17 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-    //Get the database references
-    override func viewDidLoad() {
-        //Call the read news data
-        readNewsTopic()
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Here we will instantiate the webArticle ViewController and send the Url from within that cell
+        let cell = self.DisplayNewsTable.dequeueReusableCell(withIdentifier: "DisplayNewsCells") as! DisplayNewsCells
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let webArticleViewController = storyBoard.instantiateViewController(withIdentifier: "WebArticle") as! WebArticle
+        
+        webArticleUrl = cell.hiddenWebsiteUrl.text!
+        webArticleViewController.UrlString = webArticleUrl
+        
+        self.navigationController?.pushViewController(webArticleViewController, animated: true)
     }
-    
-    //Create an operation queue that'll ensure that the news is being stored within the dbArrays before being displayed
-
     
     //Create a method that will read from the database
     func readNewsTopic(){
@@ -100,5 +109,5 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     //MARK -- Properties
     var NewsTopic = String()
     @IBOutlet private weak var DisplayNewsTable: UITableView!
-    
+    var webArticleUrl = String()
 }

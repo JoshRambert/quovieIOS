@@ -20,6 +20,7 @@
 		8321DD082039061F007E59FB /* ParseBuzzFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD072039061F007E59FB /* ParseBuzzFeed.swift */; };
 		8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD0A20398984007E59FB /* NewsViewCells.swift */; };
 		832D23F82061C02B008C423F /* UsersArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D23F72061C02B008C423F /* UsersArticles.swift */; };
+		83636A62206C77E100C37C24 /* WebArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83636A61206C77E100C37C24 /* WebArticle.swift */; };
 		83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5D720379F1600C99E9C /* AppDelegate.swift */; };
 		83EEE5DD20379F1600C99E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DB20379F1600C99E9C /* Main.storyboard */; };
 		83EEE5DF20379F1600C99E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DE20379F1600C99E9C /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		8321DD072039061F007E59FB /* ParseBuzzFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseBuzzFeed.swift; sourceTree = "<group>"; };
 		8321DD0A20398984007E59FB /* NewsViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCells.swift; sourceTree = "<group>"; };
 		832D23F72061C02B008C423F /* UsersArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersArticles.swift; sourceTree = "<group>"; };
+		83636A61206C77E100C37C24 /* WebArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArticle.swift; sourceTree = "<group>"; };
 		83EEE5D420379F1600C99E9C /* quovieIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quovieIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EEE5D720379F1600C99E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EEE5DC20379F1600C99E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
 				8321DCFD2037C4D3007E59FB /* ConfigClass.swift */,
 				832D23F72061C02B008C423F /* UsersArticles.swift */,
+				83636A61206C77E100C37C24 /* WebArticle.swift */,
 			);
 			path = quovieIOS;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */,
 				8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */,
 				8321DD002038F304007E59FB /* ParseTech.swift in Sources */,
+				83636A62206C77E100C37C24 /* WebArticle.swift in Sources */,
 				8321DD06203905A7007E59FB /* ParseBI.swift in Sources */,
 				8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */,
 				832D23F82061C02B008C423F /* UsersArticles.swift in Sources */,
