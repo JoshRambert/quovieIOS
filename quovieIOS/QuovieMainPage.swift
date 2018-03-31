@@ -50,11 +50,6 @@ final class QuovieMainPage : UICollectionViewController {
         self.navigationController?.pushViewController(NewsViewController, animated: true)
     }
     
-    //Create a push segue that will make sending the data a little more consistent
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
-    
     //MARK: Outlets
     fileprivate let reuseIdentifier = "collection_cell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 30.0, left: 10.0, bottom: 30.0, right: 10.0)

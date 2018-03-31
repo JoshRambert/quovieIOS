@@ -20,6 +20,11 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         readNewsTopic()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        //Clear the arryas for hopefully a smoother transition between news topics
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ConfigClass.shared.dbTitles.count
     }
