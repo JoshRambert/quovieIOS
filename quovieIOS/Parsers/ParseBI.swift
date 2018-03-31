@@ -57,6 +57,8 @@ public class ParseBI {
                 OperationQueue.main.addOperation ({
                     //Call the function here that wll add all the data to the database
                     self.writeBusinessInsider()
+                    //Cleat the BI Arrays
+                    self.clearBI()
                 })
             }
         }).resume()
@@ -83,6 +85,14 @@ public class ParseBI {
         
         let mWebsites = mBiRef.child("Websites")
         mWebsites.setValue(self.biWebsites)
+    }
+    
+    func clearBI(){
+        self.biAuthors.removeAll()
+        self.biTitles.removeAll()
+        self.biContent.removeAll()
+        self.biUrlImages.removeAll()
+        self.biWebsites.removeAll()
     }
     
     //MARK -- Shared class

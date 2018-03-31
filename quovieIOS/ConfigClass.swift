@@ -17,6 +17,7 @@ public class ConfigClass {
     let LS_URL = "https://newsapi.org/v2/top-headlines?sources=the-telegraph&apiKey=b58181b5d3674ec38753867894405f2c"
     let FINANCE_URL = "https://newsapi.org/v2/top-headlines?sources=the-hill&apiKey=b58181b5d3674ec38753867894405f2c"
     let BI_URL = "https://newsapi.org/v2/top-headlines?sources=business-insider&apiKey=b58181b5d3674ec38753867894405f2c"
+    let FINANCE_URL2 = "https://newsapi.org/v2/top-headlines?sources=focus&apiKey=b58181b5d3674ec38753867894405f2c"
     
     let JSON_ARRAY = "articles"
     

@@ -57,6 +57,8 @@ public class ParseBuzzFeed {
                 OperationQueue.main.addOperation({
                     //Call a function here that will add all the data to the database
                     self.writeBuzzFeed()
+                    //Clear the buz feed arrays
+                    self.clearBuzzFeed()
                 })
             }
         }).resume()
@@ -83,6 +85,14 @@ public class ParseBuzzFeed {
         
         let mWebsites = mBuzzRef.child("Websites")
         mWebsites.setValue(self.buzzWebsite)
+    }
+    
+    func clearBuzzFeed(){
+        self.buzzAuthors.removeAll()
+        self.buzzContent.removeAll()
+        self.buzzTitles.removeAll()
+        self.buzzWebsite.removeAll()
+        self.buzzUrlImages.removeAll()
     }
     
     //MARK -- shared class

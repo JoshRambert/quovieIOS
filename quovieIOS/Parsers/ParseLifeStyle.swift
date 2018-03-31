@@ -57,6 +57,8 @@ public class ParseLifestyle {
                 OperationQueue.main.addOperation ({
                     //call the function here that will add all the data to the database
                     self.writeLS()
+                    //Clear the lifestyle arrays
+                    self.clearLifestyle()
                 })
             }
         }).resume()
@@ -83,6 +85,14 @@ public class ParseLifestyle {
         
         let mWebsites = mLsRef.child("Websites");
         mWebsites.setValue(self.lsWebsite)
+    }
+    
+    func clearLifestyle(){
+        self.lsTitles.removeAll()
+        self.lsAuthors.removeAll()
+        self.lsContent.removeAll()
+        self.lsUrlImages.removeAll()
+        self.lsWebsite.removeAll()
     }
     
     //MARK -- Shared class

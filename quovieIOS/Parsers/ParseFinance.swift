@@ -22,7 +22,7 @@ public class ParseFinance {
     
     func getFinance(){
         //assign the URL
-        let url = NSURL(string: ConfigClass.shared.FINANCE_URL);
+        let url = NSURL(string: ConfigClass.shared.FINANCE_URL2);
         
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
@@ -57,6 +57,8 @@ public class ParseFinance {
                 OperationQueue.main.addOperation ({
                     //call the function here that will add all the data to the database
                     self.writeFinance()
+                    //Clear the arrays after writing the data
+                    self.clearFinance()
                 })
             }
         }).resume()
@@ -83,6 +85,15 @@ public class ParseFinance {
         
         let mWebsites = mFinanceRef.child("Websites")
         mWebsites.setValue(self.financeWebsite)
+    }
+    
+    //Clear arrays after writing the data
+    func clearFinance(){
+        self.financeTitles.removeAll()
+        self.financeAuthors.removeAll()
+        self.financeContent.removeAll()
+        self.financeWebsite.removeAll()
+        self.fincanceUrlImages.removeAll()
     }
     
     //MARK -- Shared class

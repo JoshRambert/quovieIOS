@@ -59,6 +59,8 @@ public class ParseTech {
                 OperationQueue.main.addOperation({
                     //call the function here that will add all the data to the database
                     self.writeTech()
+                    //Clear the tech arrays
+                    self.clearTech()
                 })
             }
         }).resume()
@@ -84,6 +86,14 @@ public class ParseTech {
         
         let mWebsite = mTechRef.child("Websites")
         mWebsite.setValue(self.techWebsites)
+    }
+    
+    func clearTech(){
+        self.techTitles.removeAll()
+        self.techAuthors.removeAll()
+        self.techContent.removeAll()
+        self.techWebsites.removeAll()
+        self.techUrlImages.removeAll()
     }
     
     //MARK -- shared class

@@ -58,6 +58,8 @@ public class ParseSports {
                 OperationQueue.main.addOperation({
                     //Call a function here that will add all the data to the database
                     self.writeSports()
+                    //Clear the arryas after writing the data
+                    self.clearSports()
                 })
             }
         }).resume()
@@ -84,6 +86,14 @@ public class ParseSports {
         
         let mWebsites = mSportsRef.child("Websites")
         mWebsites.setValue(self.sportsWebsite)
+    }
+    
+    func clearSports(){
+        self.sportsTitles.removeAll()
+        self.sportsAuthors.removeAll()
+        self.sportsContent.removeAll()
+        self.sportsWebsite.removeAll()
+        self.sportsUrlImages.removeAll()
     }
     
     //MARK -- Shared class
