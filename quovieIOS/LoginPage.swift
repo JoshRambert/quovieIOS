@@ -33,6 +33,13 @@ class LoginPageViewController: UIViewController {
                     self.performSegue(withIdentifier: "ToHomePage", sender: self)
                 } else{
                     //Create an error pop u message. Stating that they do not exist
+                    let newUser = UIAlertController(title: "This account does not yet exist..Create it by clicking the create account button then try loggin in again", message: nil, preferredStyle: .actionSheet)
+                    let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    
+                    //add the actions to the alertView controller
+                    newUser.addAction(okAction)
+                    
+                    self.present(newUser, animated: true, completion: nil)
                 }
             })
         }
@@ -49,6 +56,13 @@ class LoginPageViewController: UIViewController {
                     self.performSegue(withIdentifier: "ToHomePage", sender: self)
                 } else {
                     //Create a pop up message telling them that the user already exists
+                    let existingUser = UIAlertController(title: "This account already exists... try logging in with it", message: nil, preferredStyle: .actionSheet)
+                    let doneAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    
+                    //add the actions to the alertview
+                    existingUser.addAction(doneAction)
+                    
+                    self.present(existingUser, animated: true, completion: nil)
                 }
             })
         }

@@ -50,6 +50,8 @@ final class QuovieMainPage : UICollectionViewController {
         self.navigationController?.pushViewController(NewsViewController, animated: true)
     }
     
+    //Change this to use the override for segue method instead
+    
     //MARK: Outlets
     fileprivate let reuseIdentifier = "collection_cell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 30.0, left: 10.0, bottom: 30.0, right: 10.0)
