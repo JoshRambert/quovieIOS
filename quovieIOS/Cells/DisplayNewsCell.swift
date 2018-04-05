@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class DisplayNewsCells : UITableViewCell {
-    //Create te function s that will get and store the data into the news cell
+
+    //Create the functions that will get and store the data into the news cell
     func getImage(forURL imageURL: String){
         //logic to parse URL image into the ImageView
         let newsPictureUrl = URL(string: imageURL)!

@@ -45,19 +45,24 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         cell.getAuthors(forAuthor: newsAuthors[indexPath.row])
         cell.getImage(forURL: newsImages[indexPath.row])
         
+        //edit the desin of the cell
+        cell.layer.cornerRadius = 15
         return cell
     }
-    
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Here we will instantiate the webArticle ViewController and send the Url from within that cell
         let cell = self.DisplayNewsTable.dequeueReusableCell(withIdentifier: "DisplayNewsCells") as! DisplayNewsCells
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let webArticleViewController = storyBoard.instantiateViewController(withIdentifier: "WebArticle") as! WebArticle
-        
         webArticleUrl = cell.hiddenWebsiteUrl.text!
-        webArticleViewController.UrlString = webArticleUrl
         
-        self.navigationController?.pushViewController(webArticleViewController, animated: true)
+        //Send the URL string to the webView
+        performSegue(withIdentifier: "ToWebArticle", sender: webArticleUrl)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let webNewsArticle = segue.destination as? WebArticle {
+            webNewsArticle.UrlString = sender as! String
+        }
     }
     
     //Create a method that will read from the database
@@ -111,8 +116,17 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         }
     }
     
+    func clearArrays(){
+        ConfigClass.shared.dbTitles.removeAll()
+        ConfigClass.shared.dbAuthors.removeAll()
+        ConfigClass.shared.dbContent.removeAll()
+        ConfigClass.shared.dbWebsites.removeAll()
+        ConfigClass.shared.dbUrlImages.removeAll()
+    }
+    
     //MARK -- Properties
     var NewsTopic = String()
     var webArticleUrl = String()
     @IBOutlet private weak var DisplayNewsTable: UITableView!
+    let cellSpacingHeight: CGFloat = 5
 }

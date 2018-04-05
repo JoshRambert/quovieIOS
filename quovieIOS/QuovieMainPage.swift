@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 final class QuovieMainPage : UICollectionViewController {
+    
     //Assign the images from the assests file
     var images = ["Sports", "Tech", "Lifestyle", "Finance", "BusinessInsider", "BuzzFeed"]
     var topicTitles = ["Sports", "Technology", "Lifestyle", "Finance", "", ""]
@@ -41,22 +42,25 @@ final class QuovieMainPage : UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected item is", images[indexPath.row])
         //Send the string over to the DisplayNews Page to get that news topic data
-        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let NewsViewController = Storyboard.instantiateViewController(withIdentifier: "DisplayNewsArticles") as! DisplayNewsArticles
-        
-        NewsViewController.NewsTopic = images[indexPath.row]
-        self.navigationController?.pushViewController(NewsViewController, animated: true)
+        performSegue(withIdentifier: "ToDisplayNews", sender: images[indexPath.row])
     }
     
     //Change this to use the override for segue method instead
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let DisplayNews = segue.destination as? DisplayNewsArticles {
+            DisplayNews.NewsTopic = sender as! String
+        }
+    }
     
     //MARK: Outlets
     fileprivate let reuseIdentifier = "collection_cell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 30.0, left: 10.0, bottom: 30.0, right: 10.0)
     fileprivate let itemsPerRow: CGFloat = 2
     fileprivate let itemsPerColumn: CGFloat = 3
+    
+    //MARK properties
+    var newsTopic = String()
 }
 
 extension QuovieMainPage : UICollectionViewDelegateFlowLayout {

@@ -11,6 +11,7 @@ import UIKit
 import Firebase
 import FirebaseCore
 import FirebaseAuth
+import QuartzCore
 
 class LoginPageViewController: UIViewController {
     
@@ -19,6 +20,12 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
         //Store the logo into the ImageView
         logoImage.image = #imageLiteral(resourceName: "Q Solid")
+        
+        emailText.layer.borderWidth = 1
+        emailText.layer.borderColor = UIColor.gray.cgColor
+        
+        passwordText.layer.borderWidth = 1
+        passwordText.layer.borderColor = UIColor.gray.cgColor
     }
     
     //MARK Login logic
@@ -28,7 +35,7 @@ class LoginPageViewController: UIViewController {
             //Sign in with their credentials
             Auth.auth().signIn(withEmail: mEmail, password: mPassword, completion: { (user, error) in
                 //Check to see that the user is not nil
-                if let u = user {
+                if let _ = user {
                     //User does exist go to the home screen
                     self.performSegue(withIdentifier: "ToHomePage", sender: self)
                 } else{
@@ -51,7 +58,7 @@ class LoginPageViewController: UIViewController {
             //Create the account for the user here
             Auth.auth().createUser(withEmail: mEmail, password: mPassword, completion: { (user, error) in
                 //check to see that the user does not already exist
-                if let u = user {
+                if let _ = user {
                     //Create a pop up message telling them to login
                     self.performSegue(withIdentifier: "ToHomePage", sender: self)
                 } else {
