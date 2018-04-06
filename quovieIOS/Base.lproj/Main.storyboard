@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--  Profile-->
         <scene sceneID="CPp-13-xkt">
             <objects>
                 <viewController id="hgK-yn-Bh9" sceneMemberID="viewController">
@@ -22,7 +22,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3tE-ob-Dxu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="OYk-H7-kSS"/>
+                    <tabBarItem key="tabBarItem" title="  Profile" image="portfoliogreylogo" selectedImage="portfoliogreylogo" id="OYk-H7-kSS">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="-3" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ9-Jq-Uho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,6 +156,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.93055914260000006" green="0.37242987929999999" blue="0.35352071000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.93055914260000006" green="0.37242987929999999" blue="0.35352071000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="D6q-sT-2Wh" kind="relationship" relationship="viewControllers" id="7e4-Gi-y2A"/>
@@ -164,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="-1026" y="-743"/>
         </scene>
-        <!--Quovie Main Page-->
+        <!--Home-->
         <scene sceneID="vhq-e4-5op">
             <objects>
                 <collectionViewController id="D6q-sT-2Wh" customClass="QuovieMainPage" customModule="quovieIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,7 +220,7 @@
                             <outlet property="delegate" destination="D6q-sT-2Wh" id="aPe-UZ-fUB"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="eaG-gW-ruo">
+                    <tabBarItem key="tabBarItem" title="Home" image="homepagegreylogo" selectedImage="homepagegreylogo" id="eaG-gW-ruo">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
@@ -386,5 +389,9 @@
             <point key="canvasLocation" x="1433" y="-1075"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homepagegreylogo" width="45" height="35"/>
+        <image name="portfoliogreylogo" width="45" height="35"/>
+    </resources>
     <color key="tintColor" red="0.93055914260000006" green="0.37242987929999999" blue="0.35352071000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
