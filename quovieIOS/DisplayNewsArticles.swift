@@ -20,11 +20,7 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         readNewsTopic()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        //Clear the arryas for hopefully a smoother transition between news topics
-    }
-    
+    //MARK UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ConfigClass.shared.dbTitles.count
     }
@@ -47,6 +43,7 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         
         //edit the desin of the cell
         cell.layer.cornerRadius = 15
+        saveNewsGesture(cell.newsTitle.text!, cell.newsContent.text!)
         return cell
     }
         
@@ -65,7 +62,24 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    //Create a method that will read from the database
+    //Create the save gesture for the gesture recognizer
+    @IBAction func saveNewsGesture(_ title: Any, _ content: Any){
+        let saveAlert = UIAlertController(title: "Would you like to save this article to your list of favorites?", message: nil, preferredStyle: .actionSheet)
+        
+        let saveAction = UIAlertAction(title: "Yes", style: .default){
+            (alert: UIAlertAction!) -> Void in DisplayNewsCells.shared.saveNewsArticles(title as! String, content as! String)
+        }
+        
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        //add the actions
+        saveAlert.addAction(saveAction)
+        saveAlert.addAction(cancelAction)
+        
+        present(saveAlert, animated: true, completion: nil)
+    }
+    
+    //MARK -- Database
     func readNewsTopic(){
         //The database references
         let mRootRef: DatabaseReference!
@@ -116,15 +130,9 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func clearArrays(){
-        ConfigClass.shared.dbTitles.removeAll()
-        ConfigClass.shared.dbAuthors.removeAll()
-        ConfigClass.shared.dbContent.removeAll()
-        ConfigClass.shared.dbWebsites.removeAll()
-        ConfigClass.shared.dbUrlImages.removeAll()
-    }
     
     //MARK -- Properties
+    var newsCells = DisplayNewsCells()
     var NewsTopic = String()
     var webArticleUrl = String()
     @IBOutlet private weak var DisplayNewsTable: UITableView!

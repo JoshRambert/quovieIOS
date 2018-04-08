@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class DisplayNewsCells : UITableViewCell {
 
@@ -60,13 +61,29 @@ class DisplayNewsCells : UITableViewCell {
         hiddenWebsiteUrl?.text = website
     }
     
+    //MARK Database
+    func saveNewsArticles(_ newsTitle: String, _ newsContent: String){
+        //First get the references to the database then push the values
+        let mRootRef: DatabaseReference!
+        mRootRef = Database.database().reference()
+        let mUsersRef = mRootRef.child("Users")
+        
+        let userID = Auth.auth().currentUser?.uid
+        let mCurrentUserRef = mUsersRef.child(userID!)
+        let mArticlesRef = mCurrentUserRef.child("Articles")
+        
+        let savedArticles = UserArticles.init(title: newsTitle, content: newsContent)
+        
+        mArticlesRef.setValue(savedArticles)
+    }
+    
     //Properties
     @IBOutlet public weak var hiddenWebsiteUrl: UILabel!
     @IBOutlet public weak var newsTitle: UILabel!
     @IBOutlet public weak var newsContent: UILabel!
     @IBOutlet public weak var newsAuthor: UILabel!
     @IBOutlet public weak var newsImage: UIImageView!
-
+    
     //Shared class
     static let shared = DisplayNewsCells();
 }

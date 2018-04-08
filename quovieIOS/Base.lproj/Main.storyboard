@@ -333,6 +333,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="b4l-X9-kSO"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bvm-of-dQt"/>
+                                    <outletCollection property="gestureRecognizers" destination="D5S-az-bWU" appends="YES" id="ZwW-Up-9fk"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -355,6 +356,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="D5S-az-bWU">
+                    <connections>
+                        <action selector="saveNewsGesture::" destination="BYZ-38-t0r" id="pGf-XG-pO5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="666" y="-1075"/>
         </scene>

@@ -22,7 +22,7 @@ public class ParseLifestyle {
     
     func getLifeStyle(){
         //assing the URL
-        let url = NSURL(string: ConfigClass.shared.LS_URL);
+        let url = NSURL(string: ConfigClass.shared.FINANCE_URL2);
         
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{

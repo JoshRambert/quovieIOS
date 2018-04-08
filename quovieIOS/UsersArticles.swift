@@ -29,18 +29,8 @@ class UserArticles {
         }
     }
     
-    var website: String {
-        willSet(newValue){
-            print("\(self.website) is going to be the value \(newValue)")
-        }
-        didSet(oldValue){
-            print("\(oldValue) is now \(self.website)")
-        }
-    }
-    
-    init(title: String, content: String, website: String){
+    init(title: String, content: String){
         self.title = title;
         self.content = content;
-        self.website = website;
     }
 }
