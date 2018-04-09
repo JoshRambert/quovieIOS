@@ -43,7 +43,6 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         
         //edit the desin of the cell
         cell.layer.cornerRadius = 15
-        saveNewsGesture(cell.newsTitle.text!, cell.newsContent.text!)
         return cell
     }
         
@@ -61,24 +60,7 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
             webNewsArticle.UrlString = sender as! String
         }
     }
-    
-    //Create the save gesture for the gesture recognizer
-    @IBAction func saveNewsGesture(_ title: Any, _ content: Any){
-        let saveAlert = UIAlertController(title: "Would you like to save this article to your list of favorites?", message: nil, preferredStyle: .actionSheet)
-        
-        let saveAction = UIAlertAction(title: "Yes", style: .default){
-            (alert: UIAlertAction!) -> Void in DisplayNewsCells.shared.saveNewsArticles(title as! String, content as! String)
-        }
-        
-        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-        
-        //add the actions
-        saveAlert.addAction(saveAction)
-        saveAlert.addAction(cancelAction)
-        
-        present(saveAlert, animated: true, completion: nil)
-    }
-    
+
     //MARK -- Database
     func readNewsTopic(){
         //The database references

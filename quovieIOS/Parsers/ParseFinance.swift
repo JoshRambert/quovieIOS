@@ -22,7 +22,7 @@ public class ParseFinance {
     
     func getFinance(){
         //assign the URL
-        let url = NSURL(string: ConfigClass.shared.FINANCE_URL2);
+        let url = NSURL(string: ConfigClass.shared.FINANCE_URL);
         
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{

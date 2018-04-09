@@ -274,8 +274,8 @@
                                                         <constraint firstAttribute="height" constant="220" id="slL-LU-Ezq"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-cW-6mT">
-                                                    <rect key="frame" x="27" y="230" width="320" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thl-cW-6mT">
+                                                    <rect key="frame" x="27" y="228" width="320" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="pDm-iX-qBH"/>
                                                     </constraints>
@@ -298,6 +298,17 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHN-c1-h1f">
+                                                    <rect key="frame" x="314" y="293" width="49" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="7tv-HT-ElU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <state key="normal" title="Save"/>
+                                                    <connections>
+                                                        <action selector="saveButton" destination="Tch-cR-7zO" eventType="touchUpInside" id="woK-Si-nZl"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -306,17 +317,22 @@
                                                 <constraint firstItem="MOr-g0-cVM" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leadingMargin" constant="151" id="5tZ-t5-SE4"/>
                                                 <constraint firstItem="wVL-kL-1fX" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leading" constant="15" id="8aA-AO-8lQ"/>
                                                 <constraint firstItem="bMN-a0-scL" firstAttribute="top" secondItem="3Hs-6A-dSJ" secondAttribute="top" id="Bar-Z3-rST"/>
+                                                <constraint firstAttribute="bottom" secondItem="VHN-c1-h1f" secondAttribute="bottom" constant="10" id="Bdt-tB-9gS"/>
+                                                <constraint firstAttribute="trailing" secondItem="VHN-c1-h1f" secondAttribute="trailing" constant="12" id="BhW-vF-t6t"/>
                                                 <constraint firstItem="7YN-y1-Oly" firstAttribute="top" secondItem="Thl-cW-6mT" secondAttribute="bottom" constant="10" id="CY4-ht-166"/>
                                                 <constraint firstItem="wVL-kL-1fX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7YN-y1-Oly" secondAttribute="bottom" constant="15" id="FAA-fD-9wc"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="top" secondItem="bMN-a0-scL" secondAttribute="bottom" constant="8" id="H6t-ve-Fv9"/>
                                                 <constraint firstItem="bMN-a0-scL" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="leading" id="KCf-3q-m5n"/>
                                                 <constraint firstAttribute="bottom" secondItem="wVL-kL-1fX" secondAttribute="bottom" constant="9.5" id="Kbp-FY-CJt"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="trailing" secondItem="7YN-y1-Oly" secondAttribute="trailing" id="Tg3-fN-4We"/>
+                                                <constraint firstItem="VHN-c1-h1f" firstAttribute="leading" relation="lessThanOrEqual" secondItem="wVL-kL-1fX" secondAttribute="trailing" constant="258" id="VlR-ci-A21"/>
                                                 <constraint firstItem="MOr-g0-cVM" firstAttribute="top" secondItem="3Hs-6A-dSJ" secondAttribute="topMargin" constant="98" id="W6h-ml-i7V"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="centerX" secondItem="bMN-a0-scL" secondAttribute="centerX" id="g7a-sl-E6k"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="MOr-g0-cVM" secondAttribute="trailing" constant="152" id="g7n-2v-iwe"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="top" secondItem="MOr-g0-cVM" secondAttribute="bottom" constant="98" id="k82-Ie-0Qr"/>
+                                                <constraint firstItem="VHN-c1-h1f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7YN-y1-Oly" secondAttribute="bottom" constant="6" id="rwf-wh-Vjk"/>
                                                 <constraint firstItem="Thl-cW-6mT" firstAttribute="leading" secondItem="7YN-y1-Oly" secondAttribute="leading" id="v0C-8m-LmF"/>
+                                                <constraint firstItem="VHN-c1-h1f" firstAttribute="leading" secondItem="3Hs-6A-dSJ" secondAttribute="trailing" constant="-61" id="vuX-G8-vxY"/>
                                                 <constraint firstItem="7YN-y1-Oly" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3Hs-6A-dSJ" secondAttribute="bottomMargin" constant="1" id="wzH-jG-EcM"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -324,16 +340,15 @@
                                         <connections>
                                             <outlet property="hiddenWebsiteUrl" destination="MOr-g0-cVM" id="UyM-Ed-2bH"/>
                                             <outlet property="newsAuthor" destination="wVL-kL-1fX" id="m3P-n7-4K9"/>
-                                            <outlet property="newsContent" destination="7YN-y1-Oly" id="guv-Fr-1PS"/>
+                                            <outlet property="newsContentLabel" destination="7YN-y1-Oly" id="ubP-TY-MiK"/>
                                             <outlet property="newsImage" destination="bMN-a0-scL" id="Bf6-qL-YX0"/>
-                                            <outlet property="newsTitle" destination="Thl-cW-6mT" id="Chg-Ap-Ops"/>
+                                            <outlet property="newsTitleLabel" destination="Thl-cW-6mT" id="a9U-cq-IaQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="b4l-X9-kSO"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bvm-of-dQt"/>
-                                    <outletCollection property="gestureRecognizers" destination="D5S-az-bWU" appends="YES" id="ZwW-Up-9fk"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -356,13 +371,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="D5S-az-bWU">
-                    <connections>
-                        <action selector="saveNewsGesture::" destination="BYZ-38-t0r" id="pGf-XG-pO5"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="666" y="-1075"/>
+            <point key="canvasLocation" x="664.79999999999995" y="-1075.4122938530736"/>
         </scene>
         <!--Web Article-->
         <scene sceneID="Zvn-hd-fnF">

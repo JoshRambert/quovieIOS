@@ -46,11 +46,11 @@ class DisplayNewsCells : UITableViewCell {
     }
     
     func getTitle(forTitle title: String){
-        newsTitle?.text = title
+        newsTitleLabel?.text = title
     }
     
     func getContent(forContent content: String){
-        newsContent?.text = content
+        newsContentLabel?.text = content
     }
     
     func getAuthors(forAuthor author: String){
@@ -61,8 +61,25 @@ class DisplayNewsCells : UITableViewCell {
         hiddenWebsiteUrl?.text = website
     }
     
+    //add a button to the layout and whenever the button is clicked it will push the titles and content to the database
+    @IBAction func saveButton(){
+        let saveAlert = UIAlertController(title: "Would you like to save this article to your list of favorites?", message: nil, preferredStyle: .actionSheet)
+        
+        let saveAction = UIAlertAction(title: "Yes", style: .default){
+            (alert: UIAlertAction!) -> Void in self.saveNewsArticles((self.newsTitleLabel.text)!, (self.newsContentLabel.text)!, (self.hiddenWebsiteUrl.text)!)
+        }
+        
+        let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        //add the actions
+        saveAlert.addAction(saveAction)
+        saveAlert.addAction(cancelAction)
+        
+        UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.present(saveAlert, animated: true, completion: nil)
+    }
+    
     //MARK Database
-    func saveNewsArticles(_ newsTitle: String, _ newsContent: String){
+    func saveNewsArticles(_ newsTitle: String, _ newsContent: String, _ newsWebsite: String){
         //First get the references to the database then push the values
         let mRootRef: DatabaseReference!
         mRootRef = Database.database().reference()
@@ -72,15 +89,18 @@ class DisplayNewsCells : UITableViewCell {
         let mCurrentUserRef = mUsersRef.child(userID!)
         let mArticlesRef = mCurrentUserRef.child("Articles")
         
-        let savedArticles = UserArticles.init(title: newsTitle, content: newsContent)
+        let savedArticles = UserArticles.init(title: newsTitle, content: newsContent, website: newsWebsite)
         
-        mArticlesRef.setValue(savedArticles)
+        let newPush = mArticlesRef.childByAutoId()
+        newPush.child("title").setValue(savedArticles.title)
+        newPush.child("content").setValue(savedArticles.content)
+        newPush.child("website").setValue(savedArticles.website)
     }
     
     //Properties
     @IBOutlet public weak var hiddenWebsiteUrl: UILabel!
-    @IBOutlet public weak var newsTitle: UILabel!
-    @IBOutlet public weak var newsContent: UILabel!
+    @IBOutlet public weak var newsTitleLabel: UILabel!
+    @IBOutlet public weak var newsContentLabel: UILabel!
     @IBOutlet public weak var newsAuthor: UILabel!
     @IBOutlet public weak var newsImage: UIImageView!
     
