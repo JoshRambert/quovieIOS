@@ -37,19 +37,19 @@ public class ParseFinance {
                             //Get the titles and the other values
                             if let title = infoDict.value(forKey: ConfigClass.shared.JSON_TITLES){
                                 //add them to the local array
-                                self.financeTitles.append((title as? String)!)
+                                self.financeTitles.append((self.nullToNill(value: title as AnyObject) as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
-                                self.fincanceUrlImages.append((urlImages as? String)!)
+                                self.fincanceUrlImages.append((self.nullToNill(value: urlImages as AnyObject) as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
-                                self.financeContent.append((content as? String)!)
+                                self.financeContent.append((self.nullToNill(value: content as AnyObject) as? String)!)
                             }
                             if let websites = infoDict.value(forKey: ConfigClass.shared.JSON_WESBITE){
-                                self.financeWebsite.append((websites as? String)!)
+                                self.financeWebsite.append((self.nullToNill(value: websites as AnyObject) as? String)!)
                             }
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
-                                self.financeAuthors.append((authors as? String)!)
+                                self.financeAuthors.append((self.nullToNill(value: authors as AnyObject) as? String)!)
                             }
                         }
                     }
@@ -94,6 +94,14 @@ public class ParseFinance {
         self.financeContent.removeAll()
         self.financeWebsite.removeAll()
         self.fincanceUrlImages.removeAll()
+    }
+    
+    func nullToNill(value: AnyObject?) -> AnyObject? {
+        if value is NSNull{
+            return nil
+        } else{
+            return value
+        }
     }
     
     //MARK -- Shared class

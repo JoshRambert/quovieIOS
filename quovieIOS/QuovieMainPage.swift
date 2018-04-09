@@ -35,9 +35,7 @@ final class QuovieMainPage : UICollectionViewController {
         cell.NewsImage?.image = UIImage(named: images[indexPath.row])
         cell.layer.cornerRadius = 10
         cell.NewsTopic?.text = topicTitles[indexPath.row]
-        
-        //Add labels to the Cells and add place the
-        
+                
         return cell
     }
     

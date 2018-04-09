@@ -34,23 +34,22 @@ public class ParseSports {
                     for info in articlesArray {
                         //convert the elements to a dictionary then get their values that way
                         if let infoDict = info as? NSDictionary {
-                            
                             //Get the titles and and the other values
                             if let title = infoDict.value(forKey: ConfigClass.shared.JSON_TITLES){
                                 //add them to the local array
-                                self.sportsTitles.append((title as? String)!)
+                                self.sportsTitles.append((self.nullToNil(value: title as AnyObject) as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
-                                self.sportsUrlImages.append((urlImages as? String)!)
+                                self.sportsUrlImages.append((self.nullToNil(value: urlImages as AnyObject) as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
-                                self.sportsContent.append((content as? String)!)
+                                self.sportsContent.append((self.nullToNil(value: content as AnyObject) as? String)!)
                             }
                             if let websites = infoDict.value(forKey: ConfigClass.shared.JSON_WESBITE){
-                                self.sportsWebsite.append((websites as? String)!)
+                                self.sportsWebsite.append((self.nullToNil(value: websites as AnyObject) as? String)!)
                             }
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
-                                self.sportsAuthors.append((authors as? String)!)
+                                self.sportsAuthors.append((self.nullToNil(value: authors as AnyObject) as? String)!)
                             }
                         }
                     }
@@ -94,6 +93,14 @@ public class ParseSports {
         self.sportsContent.removeAll()
         self.sportsWebsite.removeAll()
         self.sportsUrlImages.removeAll()
+    }
+    
+    func nullToNil(value: AnyObject?) -> AnyObject? {
+        if value is NSNull{
+            return nil
+        } else {
+            return value
+        }
     }
     
     //MARK -- Shared class

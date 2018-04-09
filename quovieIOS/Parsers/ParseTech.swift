@@ -38,20 +38,20 @@ public class ParseTech {
                             //get the titles and the other values
                             if let title = infoDict.value(forKey: ConfigClass.shared.JSON_TITLES){
                                 //add them to the local arrays at the top
-                                self.techTitles.append((title as? String)!)
+                                self.techTitles.append((self.nullToNill(value: title as AnyObject) as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
                                 //add them to the local array
-                                self.techUrlImages.append((urlImages as? String)!)
+                                self.techUrlImages.append((self.nullToNill(value: urlImages as AnyObject) as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
-                                self.techContent.append((content as? String)!)
+                                self.techContent.append((self.nullToNill(value: content as AnyObject) as? String)!)
                             }
                             if let websites = infoDict.value(forKey: ConfigClass.shared.JSON_WESBITE){
-                                self.techWebsites.append((websites as? String)!)
+                                self.techWebsites.append((self.nullToNill(value: websites as AnyObject) as? String)!)
                             }
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
-                                self.techAuthors.append((authors as? String)!)
+                                self.techAuthors.append((self.nullToNill(value: authors as AnyObject) as? String)!)
                             }
                         }
                     }
@@ -94,6 +94,14 @@ public class ParseTech {
         self.techContent.removeAll()
         self.techWebsites.removeAll()
         self.techUrlImages.removeAll()
+    }
+    
+    func nullToNill(value: AnyObject?) -> AnyObject? {
+        if value is NSNull{
+            return nil
+        } else {
+            return value
+        }
     }
     
     //MARK -- shared class

@@ -37,19 +37,19 @@ public class ParseBuzzFeed {
                             //get the titles and the other values
                             if let title = infoDict.value(forKey: ConfigClass.shared.JSON_TITLES){
                                 //add them to the local array
-                                self.buzzTitles.append((title as? String)!)
+                                self.buzzTitles.append((self.nullToNil(value: title as AnyObject) as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
-                                self.buzzUrlImages.append((urlImages as? String)!)
+                                self.buzzUrlImages.append((self.nullToNil(value: urlImages as AnyObject) as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
-                                self.buzzContent.append((content as? String)!)
+                                self.buzzContent.append((self.nullToNil(value: content as AnyObject) as? String)!)
                             }
                             if let websites = infoDict.value(forKey: ConfigClass.shared.JSON_WESBITE){
-                                self.buzzWebsite.append((websites as? String)!)
+                                self.buzzWebsite.append((self.nullToNil(value: websites as AnyObject) as? String)!)
                             }
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
-                                self.buzzAuthors.append((authors as? String)!)
+                                self.buzzAuthors.append((self.nullToNil(value: authors as AnyObject) as? String)!)
                             }
                         }
                     }
@@ -94,6 +94,15 @@ public class ParseBuzzFeed {
         self.buzzWebsite.removeAll()
         self.buzzUrlImages.removeAll()
     }
+    
+    func nullToNil(value: AnyObject?) -> AnyObject? {
+        if value is NSNull{
+            return nil
+        } else {
+            return value
+        }
+    }
+    
     
     //MARK -- shared class
     static let shared = ParseBuzzFeed();

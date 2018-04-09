@@ -37,19 +37,19 @@ public class ParseBI {
                             //get the title and the other values
                             if let title = infoDict.value(forKey: ConfigClass.shared.JSON_TITLES){
                                 //add them to the array
-                                self.biTitles.append((title as? String)!)
+                                self.biTitles.append((self.nullToNil(value: title as AnyObject) as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
-                                self.biUrlImages.append((urlImages as? String)!)
+                                self.biUrlImages.append((self.nullToNil(value: urlImages as AnyObject) as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
-                                self.biContent.append((content as? String)!)
+                                self.biContent.append((self.nullToNil(value: content as AnyObject) as? String)!)
                             }
                             if let websites = infoDict.value(forKey: ConfigClass.shared.JSON_WESBITE){
-                                self.biWebsites.append((websites as? String)!)
+                                self.biWebsites.append((self.nullToNil(value: websites as AnyObject) as? String)!)
                             }
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
-                                self.biAuthors.append((authors as? String)!)
+                                self.biAuthors.append((self.nullToNil(value: authors as AnyObject) as? String)!)
                             }
                         }
                     }
@@ -93,6 +93,14 @@ public class ParseBI {
         self.biContent.removeAll()
         self.biUrlImages.removeAll()
         self.biWebsites.removeAll()
+    }
+    
+    func nullToNil(value: AnyObject?) -> AnyObject? {
+        if value is NSNull{
+            return nil
+        } else {
+            return value
+        }
     }
     
     //MARK -- Shared class

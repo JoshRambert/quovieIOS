@@ -1,4 +1,4 @@
-//
+ //
 //  ParseLifeStyle.swift
 //  quovieIOS
 //
@@ -22,7 +22,7 @@ public class ParseLifestyle {
     
     func getLifeStyle(){
         //assing the URL
-        let url = NSURL(string: ConfigClass.shared.FINANCE_URL2);
+        let url = NSURL(string: ConfigClass.shared.LS_URL);
         
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
@@ -37,19 +37,19 @@ public class ParseLifestyle {
                             //get the titles and the other values
                             if let title = infoDict.value(forKey: ConfigClass.shared.JSON_TITLES){
                                 //add them to the local array
-                                self.lsTitles.append((title as? String)!)
+                                self.lsTitles.append((self.nullToNill(value: title as AnyObject) as? String)!)
                             }
                             if let urlImages = infoDict.value(forKey: ConfigClass.shared.JSON_IMAGES){
-                                self.lsUrlImages.append((urlImages as? String)!)
+                                self.lsUrlImages.append((self.nullToNill(value: urlImages as AnyObject) as? String)!)
                             }
                             if let websites = infoDict.value(forKey: ConfigClass.shared.JSON_WESBITE){
-                                self.lsWebsite.append((websites as? String)!)
+                                self.lsWebsite.append((self.nullToNill(value: websites as AnyObject) as? String)!)
                             }
                             if let authors = infoDict.value(forKey: ConfigClass.shared.JSON_AUTHORS){
-                                self.lsAuthors.append((authors as? String)!)
+                                self.lsAuthors.append((self.nullToNill(value: authors as AnyObject) as? String)!)
                             }
                             if let content = infoDict.value(forKey: ConfigClass.shared.JSON_CONTENT){
-                                self.lsContent.append((content as? String)!)
+                                self.lsContent.append((self.nullToNill(value: content as AnyObject) as? String)!)
                             }
                         }
                     }
@@ -93,6 +93,14 @@ public class ParseLifestyle {
         self.lsContent.removeAll()
         self.lsUrlImages.removeAll()
         self.lsWebsite.removeAll()
+    }
+    
+    func nullToNill(value: AnyObject?) -> AnyObject?{
+        if value is NSNull{
+            return nil
+        } else {
+            return value
+        }
     }
     
     //MARK -- Shared class
