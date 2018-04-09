@@ -23,7 +23,7 @@ public class ParseSports {
     
     func getSports(){
         //assign the URL
-        let url = NSURL(string: ConfigClass.shared.SPORTS_URL);
+        let url = NSURL(string: ConfigClass.shared.SPORTS_URL2);
         
         URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
@@ -97,7 +97,7 @@ public class ParseSports {
     
     func nullToNil(value: AnyObject?) -> AnyObject? {
         if value is NSNull{
-            return nil
+            return "null" as AnyObject
         } else {
             return value
         }

@@ -97,7 +97,7 @@ public class ParseBuzzFeed {
     
     func nullToNil(value: AnyObject?) -> AnyObject? {
         if value is NSNull{
-            return nil
+            return "null" as AnyObject
         } else {
             return value
         }

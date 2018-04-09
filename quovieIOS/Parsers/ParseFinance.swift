@@ -98,7 +98,7 @@ public class ParseFinance {
     
     func nullToNill(value: AnyObject?) -> AnyObject? {
         if value is NSNull{
-            return nil
+            return "null" as AnyObject
         } else{
             return value
         }
