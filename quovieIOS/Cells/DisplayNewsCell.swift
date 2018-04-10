@@ -38,7 +38,7 @@ class DisplayNewsCells : UITableViewCell {
                         print("Couldnt get image...image is nil")
                     }
                 } else{
-                    print("Couldnt get response code for some reaso")
+                    print("Couldnt get response code for some reason")
                 }
             }
         }
