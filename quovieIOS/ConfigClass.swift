@@ -32,6 +32,9 @@ public class ConfigClass {
     var dbUrlImages = [String]();
     var dbAuthors = [String]();
     
+    var userTitles = [String]();
+    var userContent = [String]();
+    
     
     //Create the shared
     static let shared = ConfigClass();

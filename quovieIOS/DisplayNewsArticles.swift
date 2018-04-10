@@ -114,7 +114,6 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     
     
     //MARK -- Properties
-    var newsCells = DisplayNewsCells()
     var NewsTopic = String()
     var webArticleUrl = String()
     @IBOutlet private weak var DisplayNewsTable: UITableView!
