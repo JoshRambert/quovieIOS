@@ -75,7 +75,12 @@ class LoginPageViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func extrasButton(_ sender: Any) {
+        //Instantiate the other view controller
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "ExtrasPage1")
+        self.present(vc, animated: true, completion: nil)
+    }
     
     //MARK Properties
     @IBOutlet weak var emailText: UITextField!

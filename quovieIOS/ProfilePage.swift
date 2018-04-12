@@ -18,6 +18,9 @@ class ProfilePage: UIViewController, UITableViewDataSource, UITableViewDelegate 
     //MARK lifecycle
     override func viewDidLoad() {
         readProfileNews()
+        
+        self.ProfileNewsTable.delegate = self
+        self.ProfileNewsTable.dataSource = self
     }
     
     //MARK TableViewDataSource

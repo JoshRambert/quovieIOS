@@ -15,7 +15,7 @@ final class QuovieMainPage : UICollectionViewController {
     var images = ["Sports", "Tech", "Lifestyle", "Finance", "BusinessInsider", "BuzzFeed"]
     var topicTitles = ["Sports", "Technology", "Lifestyle", "Finance", "", ""]
     
-    //MARK -- Lifecycle... Call the parse data classes
+    //MARK -- Lifecycle
     override func viewDidLoad() {
         ParseSports.shared.getSports()
         ParseTech.shared.getTech()
@@ -50,6 +50,9 @@ final class QuovieMainPage : UICollectionViewController {
             DisplayNews.NewsTopic = sender as! String
         }
     }
+    
+    
+    
     
     //MARK: Outlets
     fileprivate let reuseIdentifier = "collection_cell"

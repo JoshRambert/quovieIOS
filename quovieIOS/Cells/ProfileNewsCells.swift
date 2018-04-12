@@ -24,6 +24,7 @@ class ProfileNewsCells: UITableViewCell {
     //MARL Properties
     @IBOutlet public weak var titleLabel: UILabel!
     @IBOutlet public weak var contentLabel: UILabel!
+    @IBOutlet public weak var quovieImage: UIImageView!
     
     //Shared class
     static let shared = ProfileNewsCells();
