@@ -41,13 +41,16 @@ final class QuovieMainPage : UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //Send the string over to the DisplayNews Page to get that news topic data
-        performSegue(withIdentifier: "ToDisplayNews", sender: images[indexPath.row])
+        performSegue(withIdentifier: "ToDisplayNews", sender: nil)
     }
     
     //Change this to use the override for segue method instead
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let DisplayNews = segue.destination as? DisplayNewsArticles {
-            DisplayNews.NewsTopic = sender as! String
+        let DisplayNews = segue.destination as? DisplayNewsArticles
+        
+        if let indexPath = self.collectionView?.indexPath(for: NewsViewCells()){
+            let newsTopic = images[indexPath.row]
+            DisplayNews?.NewsTopic = newsTopic
         }
     }
     

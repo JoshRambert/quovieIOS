@@ -23,9 +23,16 @@ class LoginPageViewController: UIViewController {
         
         emailText.layer.borderWidth = 1
         emailText.layer.borderColor = UIColor.gray.cgColor
+        emailText.layer.cornerRadius = emailText.frame.height / 2
+        emailText.clipsToBounds = true
         
         passwordText.layer.borderWidth = 1
         passwordText.layer.borderColor = UIColor.gray.cgColor
+        passwordText.layer.cornerRadius = emailText.frame.height / 2
+        passwordText.clipsToBounds = true
+        
+        loginButton.layer.cornerRadius = loginButton.frame.height / 4
+        loginButton.clipsToBounds = true
     }
     
     //MARK Login logic
@@ -86,4 +93,6 @@ class LoginPageViewController: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var createButton: UIButton!
 }

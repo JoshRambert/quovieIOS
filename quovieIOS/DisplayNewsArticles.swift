@@ -20,7 +20,7 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         readNewsTopic()
     }
     
-    //MARK UI
+    //MARK TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ConfigClass.shared.dbTitles.count
     }
@@ -41,13 +41,11 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         cell.getAuthors(forAuthor: newsAuthors[indexPath.row])
         cell.getImage(forURL: newsImages[indexPath.row])
         
-        //edit the desin of the cell
         cell.layer.cornerRadius = 15
         return cell
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Send the URL string to the webView
         performSegue(withIdentifier: "ToWebArticle", sender: nil)
     }
     

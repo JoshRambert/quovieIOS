@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 class WebArticle: UIViewController {
     override func viewDidLoad() {
@@ -15,11 +16,11 @@ class WebArticle: UIViewController {
         
         let url = URL(string: UrlString)
         let request = URLRequest(url: url!)
-        webView.loadRequest(request)
+        webView.load(request)
     }
     
     //MARK - Properties
     var UrlString = String()
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     
 }
