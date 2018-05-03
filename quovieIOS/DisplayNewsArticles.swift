@@ -47,17 +47,16 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Here we will instantiate the webArticle ViewController and send the Url from within that cell
-        let cell = self.DisplayNewsTable.dequeueReusableCell(withIdentifier: "DisplayNewsCells") as! DisplayNewsCells
-        webArticleUrl = cell.hiddenWebsiteUrl.text!
-        
         //Send the URL string to the webView
-        performSegue(withIdentifier: "ToWebArticle", sender: webArticleUrl)
+        performSegue(withIdentifier: "ToWebArticle", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let webNewsArticle = segue.destination as? WebArticle {
-            webNewsArticle.UrlString = sender as! String
+        let webNewsArticle = segue.destination as? WebArticle
+        
+        if let indexPath = DisplayNewsTable.indexPathForSelectedRow {
+            let webArticle = ConfigClass.shared.dbWebsites[indexPath.row]
+            webNewsArticle?.UrlString = webArticle
         }
     }
 

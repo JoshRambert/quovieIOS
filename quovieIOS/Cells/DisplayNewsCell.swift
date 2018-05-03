@@ -25,20 +25,8 @@ class DisplayNewsCells : UITableViewCell {
             if let e = error {
                 print("Error downloading news Picture \(e)")
             } else {
-                //No errors found
-                //It would be weird if we didnt have a response so check for that too
-                if let res = response as? HTTPURLResponse {
-                    print("Downloaded news picture with response code \(res.statusCode)")
-                    if let imageData = data {
-                        //finally convert the data into an image and finish the process
-                        let image = UIImage(data: imageData)
-                        //store the image into the imageView
-                        self.newsImage?.image = image
-                    } else{
-                        print("Couldnt get image...image is nil")
-                    }
-                } else{
-                    print("Couldnt get response code for some reason")
+                DispatchQueue.main.async {
+                    self.newsImage?.image = UIImage(data: data!)
                 }
             }
         }

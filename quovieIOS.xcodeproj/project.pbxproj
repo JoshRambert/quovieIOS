@@ -23,8 +23,6 @@
 		83636A62206C77E100C37C24 /* WebArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83636A61206C77E100C37C24 /* WebArticle.swift */; };
 		83636A64207420BC00C37C24 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83636A63207420BC00C37C24 /* LoginPage.swift */; };
 		8372DA1B207C997000082489 /* ProfileNewsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372DA1A207C997000082489 /* ProfileNewsCells.swift */; };
-		83A69558207EA8E700709973 /* Extras1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A69557207EA8E700709973 /* Extras1.swift */; };
-		83A6955A207EAA8E00709973 /* ExtrasPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A69559207EAA8E00709973 /* ExtrasPage2.swift */; };
 		83EEE5D820379F1600C99E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEE5D720379F1600C99E9C /* AppDelegate.swift */; };
 		83EEE5DD20379F1600C99E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DB20379F1600C99E9C /* Main.storyboard */; };
 		83EEE5DF20379F1600C99E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EEE5DE20379F1600C99E9C /* Assets.xcassets */; };
@@ -74,8 +72,6 @@
 		83636A61206C77E100C37C24 /* WebArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArticle.swift; sourceTree = "<group>"; };
 		83636A63207420BC00C37C24 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		8372DA1A207C997000082489 /* ProfileNewsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNewsCells.swift; sourceTree = "<group>"; };
-		83A69557207EA8E700709973 /* Extras1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras1.swift; sourceTree = "<group>"; };
-		83A69559207EAA8E00709973 /* ExtrasPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtrasPage2.swift; sourceTree = "<group>"; };
 		83EEE5D420379F1600C99E9C /* quovieIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quovieIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EEE5D720379F1600C99E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EEE5DC20379F1600C99E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,15 +154,6 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		83A69556207EA8B200709973 /* Extras */ = {
-			isa = PBXGroup;
-			children = (
-				83A69557207EA8E700709973 /* Extras1.swift */,
-				83A69559207EAA8E00709973 /* ExtrasPage2.swift */,
-			);
-			path = Extras;
-			sourceTree = "<group>";
-		};
 		83EEE5CB20379F1600C99E9C = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +179,6 @@
 		83EEE5D620379F1600C99E9C /* quovieIOS */ = {
 			isa = PBXGroup;
 			children = (
-				83A69556207EA8B200709973 /* Extras */,
 				8321DD0920398954007E59FB /* Cells */,
 				8321DCFA2037C480007E59FB /* Parsers */,
 				83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */,
@@ -543,7 +529,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A69558207EA8E700709973 /* Extras1.swift in Sources */,
 				83636A64207420BC00C37C24 /* LoginPage.swift in Sources */,
 				8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */,
 				8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */,
@@ -554,7 +539,6 @@
 				8321DCF52037AB62007E59FB /* QuovieMainPage.swift in Sources */,
 				832D23F82061C02B008C423F /* UsersArticles.swift in Sources */,
 				8321DCFC2037C4A3007E59FB /* ParseSports.swift in Sources */,
-				83A6955A207EAA8E00709973 /* ExtrasPage2.swift in Sources */,
 				8321DCF72037AB86007E59FB /* DisplayNewsArticles.swift in Sources */,
 				8308960B203C1ED500881E90 /* DisplayNewsCell.swift in Sources */,
 				8321DD022038F8FC007E59FB /* ParseFinance.swift in Sources */,
