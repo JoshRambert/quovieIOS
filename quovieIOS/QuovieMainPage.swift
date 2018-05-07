@@ -48,14 +48,12 @@ final class QuovieMainPage : UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let DisplayNews = segue.destination as? DisplayNewsArticles
         
-        if let indexPath = self.collectionView?.indexPath(for: NewsViewCells()){
-            let newsTopic = images[indexPath.row]
+        if let indexPaths: Array = (collectionView?.indexPathsForSelectedItems) {
+            let indexx: IndexPath = indexPaths[0] 
+            let newsTopic = images[indexx.row]
             DisplayNews?.NewsTopic = newsTopic
         }
     }
-    
-    
-    
     
     //MARK: Outlets
     fileprivate let reuseIdentifier = "collection_cell"
@@ -63,8 +61,6 @@ final class QuovieMainPage : UICollectionViewController {
     fileprivate let itemsPerRow: CGFloat = 2
     fileprivate let itemsPerColumn: CGFloat = 3
     
-    //MARK properties
-    var newsTopic = String()
 }
 
 extension QuovieMainPage : UICollectionViewDelegateFlowLayout {

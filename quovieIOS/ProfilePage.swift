@@ -22,15 +22,18 @@ class ProfilePage: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     //MARK TableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ConfigClass.shared.userTitles.count;
+        return articlesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileNewsCells") as! ProfileNewsCells
         
+        let article : NSDictionary?
+        article = self.articlesArray[indexPath.row]
+        
         //get the title and the content of the profile saved news
-        cell.getTitle(forTitle: ConfigClass.shared.userTitles[indexPath.row])
-        cell.getContent(forContent: ConfigClass.shared.userContent[indexPath.row])
+        cell.getTitle(forTitle: article?["title"] as? String ?? "")
+        cell.getContent(forContent: article?["content"] as? String ?? "")
         
         cell.layer.cornerRadius = 12
         return cell
@@ -38,30 +41,24 @@ class ProfilePage: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
     //MARK Database
     func readProfileNews(){
-        //First get the reference to the current user from the database and then get all of their
         let mRootRef: DatabaseReference!
-        mRootRef = Database.database().reference();
+        mRootRef = Database.database().reference()
         let mUserRef = mRootRef.child("Users")
         let mCurrentUser = mUserRef.child((Auth.auth().currentUser?.uid)!)
         let mUserArticles = mCurrentUser.child("Articles")
         
-        //Get the data from the database
-        mUserArticles.observe(.value , with: {snapshot in
-            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                for snap in snapshots {
-                    if let articlesDict = snap.value as? NSDictionary{
-                        if let title = articlesDict.value(forKey: "title"){
-                            ConfigClass.shared.userTitles.append(title as! String)
-                        }
-                        if let content = articlesDict.value(forKey: "content"){
-                            ConfigClass.shared.userContent.append(content as! String)
-                        }
-                    }
-                }
-            }
+        mUserArticles.observe(.childAdded, with: {(snapshot) in
+            let snapshot = snapshot.value as? NSDictionary
+            
+            //add the snapshot to an array of NSDicitonaries
+            self.articlesArray.append(snapshot)
+            
+            //insert the rows into the tableView
+            self.ProfileNewsTable.insertRows(at: [IndexPath(row: self.articlesArray.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
         })
     }
     
     //MARK properties
     @IBOutlet private weak var ProfileNewsTable: UITableView!
+    var articlesArray = [NSDictionary?]()
 }
