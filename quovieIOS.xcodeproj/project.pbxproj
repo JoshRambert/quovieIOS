@@ -20,6 +20,7 @@
 		8321DD082039061F007E59FB /* ParseBuzzFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD072039061F007E59FB /* ParseBuzzFeed.swift */; };
 		8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8321DD0A20398984007E59FB /* NewsViewCells.swift */; };
 		832D23F82061C02B008C423F /* UsersArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D23F72061C02B008C423F /* UsersArticles.swift */; };
+		834DB61720A10ED40017686A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834DB61620A10ED40017686A /* TabBarController.swift */; };
 		83636A62206C77E100C37C24 /* WebArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83636A61206C77E100C37C24 /* WebArticle.swift */; };
 		83636A64207420BC00C37C24 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83636A63207420BC00C37C24 /* LoginPage.swift */; };
 		8372DA1B207C997000082489 /* ProfileNewsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8372DA1A207C997000082489 /* ProfileNewsCells.swift */; };
@@ -69,6 +70,7 @@
 		8321DD072039061F007E59FB /* ParseBuzzFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseBuzzFeed.swift; sourceTree = "<group>"; };
 		8321DD0A20398984007E59FB /* NewsViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCells.swift; sourceTree = "<group>"; };
 		832D23F72061C02B008C423F /* UsersArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersArticles.swift; sourceTree = "<group>"; };
+		834DB61620A10ED40017686A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		83636A61206C77E100C37C24 /* WebArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArticle.swift; sourceTree = "<group>"; };
 		83636A63207420BC00C37C24 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		8372DA1A207C997000082489 /* ProfileNewsCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNewsCells.swift; sourceTree = "<group>"; };
@@ -154,6 +156,19 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		834DB61820A11CEB0017686A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				834DB61620A10ED40017686A /* TabBarController.swift */,
+				83636A63207420BC00C37C24 /* LoginPage.swift */,
+				83636A61206C77E100C37C24 /* WebArticle.swift */,
+				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
+				8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */,
+				8321DCF42037AB62007E59FB /* QuovieMainPage.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		83EEE5CB20379F1600C99E9C = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +194,7 @@
 		83EEE5D620379F1600C99E9C /* quovieIOS */ = {
 			isa = PBXGroup;
 			children = (
+				834DB61820A11CEB0017686A /* Controllers */,
 				8321DD0920398954007E59FB /* Cells */,
 				8321DCFA2037C480007E59FB /* Parsers */,
 				83EEE6052037A0FC00C99E9C /* GoogleService-Info.plist */,
@@ -186,14 +202,9 @@
 				83EEE5DB20379F1600C99E9C /* Main.storyboard */,
 				83EEE5DE20379F1600C99E9C /* Assets.xcassets */,
 				83EEE5E020379F1600C99E9C /* LaunchScreen.storyboard */,
-				8321DCF42037AB62007E59FB /* QuovieMainPage.swift */,
 				83EEE5E320379F1600C99E9C /* Info.plist */,
-				8321DCF62037AB86007E59FB /* DisplayNewsArticles.swift */,
-				8321DCF82037ABBC007E59FB /* ProfilePage.swift */,
-				8321DCFD2037C4D3007E59FB /* ConfigClass.swift */,
 				832D23F72061C02B008C423F /* UsersArticles.swift */,
-				83636A61206C77E100C37C24 /* WebArticle.swift */,
-				83636A63207420BC00C37C24 /* LoginPage.swift */,
+				8321DCFD2037C4D3007E59FB /* ConfigClass.swift */,
 			);
 			path = quovieIOS;
 			sourceTree = "<group>";
@@ -532,6 +543,7 @@
 				83636A64207420BC00C37C24 /* LoginPage.swift in Sources */,
 				8321DD042038FE32007E59FB /* ParseLifeStyle.swift in Sources */,
 				8321DD0B20398984007E59FB /* NewsViewCells.swift in Sources */,
+				834DB61720A10ED40017686A /* TabBarController.swift in Sources */,
 				8321DD002038F304007E59FB /* ParseTech.swift in Sources */,
 				83636A62206C77E100C37C24 /* WebArticle.swift in Sources */,
 				8372DA1B207C997000082489 /* ProfileNewsCells.swift in Sources */,

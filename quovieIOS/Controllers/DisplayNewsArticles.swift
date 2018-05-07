@@ -16,7 +16,6 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     
     //MARK Lifecycle
     override func viewDidLoad() {
-        //Call the read news data
         readNewsTopic()
     }
     
@@ -107,6 +106,7 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         }) {(error) in
             print(error.localizedDescription)
         }
+        self.DisplayNewsTable.reloadData()
     }
     
     

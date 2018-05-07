@@ -84,28 +84,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7Gm-RC-dwc" firstAttribute="top" secondItem="3tE-ob-Dxu" secondAttribute="top" id="QWi-k3-qeR"/>
-                            <constraint firstItem="7Gm-RC-dwc" firstAttribute="leading" secondItem="3tE-ob-Dxu" secondAttribute="leading" id="QZK-yv-VoU"/>
-                            <constraint firstAttribute="trailing" secondItem="7Gm-RC-dwc" secondAttribute="trailing" id="XHT-QN-X39"/>
-                            <constraint firstAttribute="bottom" secondItem="7Gm-RC-dwc" secondAttribute="bottom" id="tWs-O4-dBZ"/>
+                            <constraint firstItem="7Gm-RC-dwc" firstAttribute="leading" secondItem="3tE-ob-Dxu" secondAttribute="leading" id="DjR-mD-kfw"/>
+                            <constraint firstItem="7Gm-RC-dwc" firstAttribute="trailing" secondItem="3tE-ob-Dxu" secondAttribute="trailing" id="HnS-8l-rk0"/>
+                            <constraint firstItem="7Gm-RC-dwc" firstAttribute="top" secondItem="ZKG-g0-kZN" secondAttribute="top" constant="64" id="nyT-zR-qAt"/>
+                            <constraint firstAttribute="bottom" secondItem="7Gm-RC-dwc" secondAttribute="bottom" id="xEM-us-wCP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3tE-ob-Dxu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="  Profile" image="portfoliogreylogo" selectedImage="portfoliogreylogo" id="OYk-H7-kSS">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="-3" vertical="0.0"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="IDb-tI-u4X"/>
                     <connections>
                         <outlet property="ProfileNewsTable" destination="7Gm-RC-dwc" id="Nbj-KU-ffx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJ9-Jq-Uho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="-305.39730134932535"/>
+            <point key="canvasLocation" x="-39" y="-346"/>
         </scene>
-        <!--Login Page View Controller-->
+        <!--LoginPage-->
         <scene sceneID="k7s-2n-j1h">
             <objects>
-                <viewController id="XYJ-yE-WFT" customClass="LoginPageViewController" customModule="quovieIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPage" title="LoginPage" id="XYJ-yE-WFT" customClass="LoginPageViewController" customModule="quovieIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ra4-li-pIE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -225,8 +226,14 @@
         <!--Quovie-->
         <scene sceneID="BgM-Et-eZB">
             <objects>
-                <tabBarController id="mbb-yS-XYW" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Quovie" id="Dyt-IN-SN6"/>
+                <tabBarController id="mbb-yS-XYW" customClass="TabBarController" customModule="quovieIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Quovie" id="Dyt-IN-SN6">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="ubG-Db-yzK">
+                            <connections>
+                                <action selector="logoutButtonClick:" destination="mbb-yS-XYW" id="SNr-mc-887"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="3S7-dX-1cb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -237,7 +244,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="D6q-sT-2Wh" kind="relationship" relationship="viewControllers" id="7e4-Gi-y2A"/>
-                        <segue destination="hgK-yn-Bh9" kind="relationship" relationship="viewControllers" id="BgN-RC-0yT"/>
+                        <segue destination="hgK-yn-Bh9" kind="relationship" relationship="viewControllers" id="5hN-bh-XSA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRj-VP-VWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
