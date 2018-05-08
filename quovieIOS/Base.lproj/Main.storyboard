@@ -433,8 +433,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="b4l-X9-kSO"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bvm-of-dQt"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WrJ-lP-xTa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pNP-6F-10i"/>
                                 </connections>
                             </tableView>
                         </subviews>

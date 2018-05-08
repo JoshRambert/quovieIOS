@@ -52,6 +52,7 @@ final class QuovieMainPage : UICollectionViewController {
             let indexx: IndexPath = indexPaths[0] 
             let newsTopic = images[indexx.row]
             DisplayNews?.NewsTopic = newsTopic
+            
         }
     }
     

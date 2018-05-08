@@ -1,4 +1,3 @@
-//
 //  DisplayNewsArticles.swift
 //  quovieIOS
 //
@@ -16,8 +15,11 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     
     //MARK Lifecycle
     override func viewDidLoad() {
+        refreshUI()
         readNewsTopic()
+        refreshUI()
     }
+    
     
     //MARK TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,19 +29,18 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DisplayNewsCells") as! DisplayNewsCells
         
-        //Get the array of news data from the Shared configuration class
         let newsTitles = ConfigClass.shared.dbTitles
         let newsContent = ConfigClass.shared.dbContent
         let newsAuthors = ConfigClass.shared.dbAuthors
         let newsImages = ConfigClass.shared.dbUrlImages
         let newsWebsites = ConfigClass.shared.dbWebsites
-        
+            
         cell.getTitle(forTitle: newsTitles[indexPath.row])
         cell.getContent(forContent: newsContent[indexPath.row])
         cell.getWebsites(forWebsite: newsWebsites[indexPath.row])
         cell.getAuthors(forAuthor: newsAuthors[indexPath.row])
         cell.getImage(forURL: newsImages[indexPath.row])
-        
+            
         cell.layer.cornerRadius = 15
         return cell
     }
@@ -59,7 +60,6 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
 
     //MARK -- Database
     func readNewsTopic(){
-        //The database references
         let mRootRef: DatabaseReference!
         mRootRef = Database.database().reference();
         let mNewsRef = mRootRef.child("News IOS");
@@ -67,7 +67,6 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         
         
         mNewsTopic.observeSingleEvent(of: .value, with: {(snapshot) in
-        //Get the values then send it into the config class db
             let values = snapshot.value as? NSDictionary
             let titles = values?["Titles"] as? Array<String> ?? [String]();
             ConfigClass.shared.dbTitles = titles
@@ -109,10 +108,16 @@ class DisplayNewsArticles : UIViewController, UITableViewDataSource, UITableView
         self.DisplayNewsTable.reloadData()
     }
     
+    func refreshUI(){
+        DispatchQueue.main.async {
+            self.DisplayNewsTable.reloadData()
+        }
+    }
     
     //MARK -- Properties
     var NewsTopic = String()
     var webArticleUrl = String()
     @IBOutlet private weak var DisplayNewsTable: UITableView!
     let cellSpacingHeight: CGFloat = 5
+    static let shared = DisplayNewsArticles()
 }
