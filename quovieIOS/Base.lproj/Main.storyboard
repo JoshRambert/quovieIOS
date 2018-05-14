@@ -149,11 +149,8 @@
                                     <action selector="createAccountButton:" destination="XYJ-yE-WFT" eventType="touchUpInside" id="0E9-18-5vH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-nc-AAV">
-                                <rect key="frame" x="121" y="85" width="134" height="103"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKB-W3-byu">
-                                <rect key="frame" x="97" y="396" width="181" height="30"/>
+                                <rect key="frame" x="97.5" y="396" width="181" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" hint="Password"/>
                                 <constraints>
@@ -169,19 +166,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-nc-AAV">
+                                <rect key="frame" x="113" y="94" width="150" height="130"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xlo-nc-AAV" firstAttribute="centerX" secondItem="Ra4-li-pIE" secondAttribute="centerX" id="0uh-t1-WyL"/>
                             <constraint firstItem="pf6-Cb-G1N" firstAttribute="centerX" secondItem="Ra4-li-pIE" secondAttribute="centerX" id="2CQ-CZ-AXc"/>
+                            <constraint firstItem="RVW-vF-yCz" firstAttribute="trailing" secondItem="Xlo-nc-AAV" secondAttribute="trailing" constant="112" id="2Cz-ff-sNU"/>
                             <constraint firstItem="fKB-W3-byu" firstAttribute="top" secondItem="XLH-ov-EBF" secondAttribute="bottom" constant="48" id="2G0-C7-uf9"/>
-                            <constraint firstItem="RVW-vF-yCz" firstAttribute="trailing" secondItem="Xlo-nc-AAV" secondAttribute="trailing" constant="120" id="4fb-jW-Xou"/>
-                            <constraint firstItem="XLH-ov-EBF" firstAttribute="top" secondItem="Xlo-nc-AAV" secondAttribute="bottom" constant="130" id="9Gf-EG-QH1"/>
                             <constraint firstItem="HPg-RK-zDS" firstAttribute="top" secondItem="pf6-Cb-G1N" secondAttribute="bottom" constant="30" id="BDV-xh-t1s"/>
-                            <constraint firstItem="Xlo-nc-AAV" firstAttribute="top" secondItem="RVW-vF-yCz" secondAttribute="top" constant="65" id="KqQ-ih-CmD"/>
+                            <constraint firstItem="XLH-ov-EBF" firstAttribute="top" secondItem="Xlo-nc-AAV" secondAttribute="bottom" constant="94" id="FPw-Ru-rvk"/>
+                            <constraint firstItem="Xlo-nc-AAV" firstAttribute="leading" secondItem="RVW-vF-yCz" secondAttribute="leading" constant="113" id="GQs-5e-ZOM"/>
                             <constraint firstItem="HPg-RK-zDS" firstAttribute="centerX" secondItem="Ra4-li-pIE" secondAttribute="centerX" id="W7W-M3-Psm"/>
-                            <constraint firstItem="Xlo-nc-AAV" firstAttribute="leading" secondItem="RVW-vF-yCz" secondAttribute="leading" constant="121" id="aA0-xY-IoM"/>
                             <constraint firstItem="XLH-ov-EBF" firstAttribute="centerY" secondItem="Ra4-li-pIE" secondAttribute="centerY" id="kJT-5J-mCW"/>
+                            <constraint firstItem="Xlo-nc-AAV" firstAttribute="top" secondItem="RVW-vF-yCz" secondAttribute="top" constant="74" id="nuZ-St-pGU"/>
                             <constraint firstItem="fKB-W3-byu" firstAttribute="centerX" secondItem="Xlo-nc-AAV" secondAttribute="centerX" id="qr5-en-v0P"/>
                             <constraint firstItem="Xlo-nc-AAV" firstAttribute="centerX" secondItem="Ra4-li-pIE" secondAttribute="centerX" id="xQ3-8j-FMY"/>
                             <constraint firstItem="XLH-ov-EBF" firstAttribute="centerX" secondItem="Xlo-nc-AAV" secondAttribute="centerX" id="y6C-e4-6Gk"/>
